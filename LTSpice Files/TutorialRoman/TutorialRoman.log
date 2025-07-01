@@ -1,6 +1,6 @@
 LTspice 24.0.12 for Windows
 Circuit: * D:\Projects\ZekEng-Intern\LTSpice Files\TutorialRoman\TutorialRoman.asc
-Start Time: Tue Jul  1 13:11:16 2025
+Start Time: Tue Jul  1 13:37:14 2025
 solver = Normal
 Maximum thread count: 20
 
@@ -48,5 +48,5 @@ tnom = 27
 temp = 27
 method = modified trap
 .step rgain=200000
-Total elapsed time: 1.340 seconds.
+Total elapsed time: 1.704 seconds.
 
