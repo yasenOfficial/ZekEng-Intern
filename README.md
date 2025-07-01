@@ -4,6 +4,9 @@
 
 Разучаване LTSpice от огромния Роман (Следване на Tutorial-a)
 
+Тutorial-a.......
+![FFTAnalysis](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Book.jpg)
+
 Работна директория: `LTSpice Files/TutorialRoman.asc`
 
 Покрито в Tutorial-a:
