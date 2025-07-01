@@ -27,7 +27,7 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 10Meg – крайна честота 10 MHz
 
-![ACanalysis](images/ACAnalysis.png)
+![ACanalysis](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/ACAnalysis.png)
 
 ## Транзиентен анализ (.tran)
 
@@ -43,7 +43,7 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 0.01u – максимална стъпка 0.01 µs
 
-![TransitiveAnalysis](images/TransitiveAnalysis.png)
+![TransitiveAnalysis](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/TransitiveAnalysis.png)
 
 ## Фурие-анализ (.four)
 
@@ -55,7 +55,7 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 10V(out) – (10 V при основния хармоник на изхода)
 
-![FFTAnalysis](images/FFTAnalysis.png)
+![FFTAnalysis](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/FFTAnalysis.png)
 
 
 ## Параметрично стъпково преминаване (.step)
@@ -68,7 +68,7 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 За всяка стойност се повтарят горните анализи
 
-![Multiple Simulations](images/MultipleSimulations.png)
+![Multiple Simulations](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/MultipleSimulations.png)
 
 
 ## Идентифициране на дефект
@@ -77,7 +77,7 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 Наблюдение на графиката: Обръща се внимание къде сигналът изкривява или има рязка промяна на наклона.
 
-![IndentifyingDefect](images/IndentifyingDefect.png)
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/IndentifyingDefect.png)
 
 Измерване с курсори: Поставят се два курсора преди и в началото на аномалията, за да се изчисли промяната във времето и напрежението.
 
