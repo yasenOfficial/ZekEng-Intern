@@ -8,12 +8,12 @@ R2 N003 N002 10k
 V2 0 N006 15
 V3 N001 0 15
 R4 Out 0 1k
-V1 N002 0 SINE(0 1 500k) AC 1
+V1 N002 0 SINE(0 1 50k) AC 1
 .model NPN NPN
 .model PNP PNP
 .lib C:\Users\Yasen\AppData\Local\LTspice\lib\cmp\standard.bjt
 * .ac dec 50 1k 10Meg
-.tran 0 30u 10u 0.001u
+.tran 0 300u 100u 0.01u
 .four 500k 10V(out)
 .lib UniversalOpAmp2.lib
 .backanno
