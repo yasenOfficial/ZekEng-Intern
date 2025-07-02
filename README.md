@@ -151,7 +151,7 @@ https://www.mouser.bg/ProductDetail/WIMA/FKP1R022205H00KYSD?qs=sGAEpiMZZMsh%252B
 
 Параметри на проблемните резистори:
 
-![R params](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Rparams.png)
+![R params](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/RParams.png)
 
 https://www.mouser.bg/ProductDetail/ROHM-Semiconductor/ESR18EZPJ131?qs=493kPxzlxfJ2i%2Fymb6BOsw%3D%3D
 
