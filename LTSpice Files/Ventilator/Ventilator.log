@@ -1,6 +1,6 @@
 LTspice 24.0.12 for Windows
 Circuit: * D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\Ventilator.asc
-Start Time: Wed Jul  2 10:50:12 2025
+Start Time: Wed Jul  2 11:11:24 2025
 Error on line 3540 : .sympath lib/sym
 	 Unknown control card
 solver = Normal
@@ -192,19 +192,5 @@ vernier = 0.0625
 Source Step = 57.996%
 Source stepping failed
 
-Pseudo Transient failed in finding the operating point at 58.1323 ms.
+Pseudo Transient failed in finding the operating point at 58.1302 ms.
 Trouble finding operating point....skipping operating point for Transient analysis.
-Ignoring empty pin current: Ix(u2:vdd)
-Ignoring empty pin current: Ix(u3:vdd)
-Ignoring empty pin current: Ix(u4:vdd)
-Ignoring empty pin current: Ix(u5:vdd)
-.step rhumsensor=1 rpwr=1
-Changing Tseed to 1e-09
-to 2e-09
-
-
-
-.step rhumsensor=1000000 rpwr=1
-
-
-

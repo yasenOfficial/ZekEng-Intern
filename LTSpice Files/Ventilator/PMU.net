@@ -1,0 +1,21 @@
+* D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\PMU.asc
+D5 N004 VCC BZX84B12VLY
+R6 N003 N002 2k
+R7 N003 N002 2k
+R8 N003 N002 2k
+R9 N003 N002 2k
+C2 VCC 0 100µ V=16 Irms=280m Rser=0.11 Lser=3.5n mfg="Würth Elektronik" pn="860040373002 WCAP-ATUL 6,3x11" type="Al electrolytic"
+C3 N002 N004 0.22µ V=400 Irms=0 Rser=0.0381 Lser=11.951n mfg="Würth Elektronik" pn="890283425002CS WCAP-FTBE 15 x 18 x 11 x 5" type="Box"
+D4 0 N004 1N4148
+V1 VCC N003 SINE(0 311.127 50)
+RL VCC N001 1k2
+L2 N001 N003 5H
+.model D D
+.lib C:\Users\Yasen\AppData\Local\LTspice\lib\cmp\standard.dio
+.tran 0 2s 150ms 1ms
+.include lib/sub/thyristr.lib
+.include lib/sub/CD4000.lib
+.sympath lib/sym
+* Load
+.backanno
+.end

@@ -1,7 +1,0 @@
-* D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\NAND Tests.asc
-V1 N001 0 SINE(6 6 50)
-XU3 N001 N001 OUT VDD 0 CD4093B VDD=5 SPEED=1.0 TRIPDT=5e-9
-.include lib/sub/CD4000.lib
-.tran 0.5
-.backanno
-.end

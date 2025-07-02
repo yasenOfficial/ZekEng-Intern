@@ -1,6 +1,6 @@
 # Цел на стажа:
 
-Да се направи симулация на вече направена платка за контролиране на вентилатор. Платката гори често и има нужда от оптимизация. Дадени са файлове за Reverse-engineering в `Files for Reverse Engenieering`
+Да се направи симулация на вече направена платка за контролиране на вентилатор. Платката гори често и има нужда от оптимизация. Дадени са файлове за Reverse-engineering в `/Files for Reverse Engenieering`
 
 ![TaskPCB2](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/TaskPCB2.jpg)
 ![TaskPCB1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/TaskPCB1.jpg)
@@ -101,9 +101,13 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 ## Импортиране на CD4000 серията в LTSpice
 
+`Ventilator\lib\sym\*` `Ventilator\lib\sub\CD4000.lib` 
+
 https://www.amarketplaceofideas.com/adding-series-4000-cmos-library-to-ltspice.htm
 
 ## Тестове на NAND 4093B gate
+
+`Ventilator\NAND Tests.asc`
 
 Проведох прост дали NAND gate-a от библиотеката работи със синусоида с амплитуда 12 V
 
@@ -114,12 +118,27 @@ https://www.amarketplaceofideas.com/adding-series-4000-cmos-library-to-ltspice.h
 
 Следвах Tutorial-a на Analog Devices:
 
+`Ventilator\SW.asc`
+
 ![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesADDemo.png)
 
 И после направих подобна моя имплементация с резисотри вместо импулсен генератор:
 
 ![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesCustom.png)
 
-## Импортирах и библиотектата с симистора, който е сложен на платката
+
+## Импортирах и библиотектата с симистора (MAC97A8), който е сложен на платката
+
+`Ventilator\lib\sub\thyristr.lib` 
 
 https://github.com/HMGrunthos/InrushTimer/blob/master/thyristr.lib
+
+## Teстване на захранването на схемата:
+
+`Ventilator\PMU.asc`
+
+Захранвaнето се стабилизира за около 160ms докато стигне 11.3V. После лека полека се покачва до 11.6 в рамките на до 2 секунди
+
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PMUTest.png)
+
+
