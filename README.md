@@ -139,6 +139,7 @@ https://github.com/HMGrunthos/InrushTimer/blob/master/thyristr.lib
 
 Захранвaнето се стабилизира за около 160ms докато стигне 11.3V. После лека полека се покачва до 11.6 в рамките на до 2 секунди
 
-![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PMUTest.png)
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PMU11.3V.png)
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PMU11.6V.png)
 
 
