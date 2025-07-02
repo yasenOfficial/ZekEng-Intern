@@ -87,3 +87,13 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 На операционния усилвател му отнема измеримо време за да покрие съществуващия пад на напреженеие между сумирания VBE на 2та транзистора Q1, Q2
 
 Извод: 3тия сигнал (от 6-те) е минималния приемлив (R1 = 140k) с амплитуда 14V
+
+
+
+
+
+
+
+
+https://github.com/HMGrunthos/InrushTimer/blob/master/thyristr.lib
+https://www.amarketplaceofideas.com/adding-series-4000-cmos-library-to-ltspice.htm
