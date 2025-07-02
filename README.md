@@ -1,6 +1,9 @@
 # Цел на стажа:
 
-Да се направи симулация на вече направена платка за контролиране на вентилатор. Платката гори често и има нужда от оптимизация.
+Да се направи симулация на вече направена платка за контролиране на вентилатор. Платката гори често и има нужда от оптимизация. Дадени са файлове за Reverse-engineering
+
+![TaskPCB1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/TaskPCB1.jpg)
+![TaskPCB2](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/TaskPCB2.jpg)
 
 # Ден 1 - 01.07.2025
 
@@ -9,7 +12,7 @@
 Разучаване LTSpice от огромния Роман (Следване на Tutorial-a)
 
 Тutorial-a.......
-![FFTAnalysis](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Book.jpg)
+![Tutorial Book](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Book.jpg)
 
 Работна директория: `LTSpice Files/TutorialRoman.asc`
 
