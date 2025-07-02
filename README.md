@@ -1,3 +1,7 @@
+# Цел на стажа:
+
+Да се направи симулация на вече направена платка за контролиране на вентилатор. Платката гори често и има нужда от оптимизация.
+
 # Ден 1 - 01.07.2025
 
 Запознанство с екипа
@@ -90,10 +94,29 @@ dec 50 – логаритмична скала с 50 точки за всяка 
 
 
 
+# Ден 2 - 02.07.2025
+
+## Импортиране на CD4000 серията в LTSpice
+
+https://www.amarketplaceofideas.com/adding-series-4000-cmos-library-to-ltspice.htm
+
+## Тестове на NAND 4093B gate
+
+Проведох прост дали NAND gate-a от библиотеката работи със синусоида с амплитуда 12 V
+
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/NANDTests.png)
 
 
+## Тестове и разбиране как работи SW gate-a в LTSpice
 
+Следвах Tutorial-a на Analog Devices:
 
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesADDemo.png)
+
+И после направих подобна моя имплементация с резисотри вместо импулсен генератор:
+
+![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesCustom.png)
+
+## Импортирах и библиотектата с симистора, който е сложен на платката
 
 https://github.com/HMGrunthos/InrushTimer/blob/master/thyristr.lib
-https://www.amarketplaceofideas.com/adding-series-4000-cmos-library-to-ltspice.htm

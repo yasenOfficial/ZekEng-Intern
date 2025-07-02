@@ -1,0 +1,45 @@
+* D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\Ventilator.asc
+R1 N001 N010 220K
+R2 N010 0 15K
+D1 N010 N009 1N4148
+R3 N009 0 3m3
+R4 N012 N011 3m3
+C1 N012 0 100µ V=16 Irms=280m Rser=0.11 Lser=3.5n mfg="Würth Elektronik" pn="860040373002 WCAP-ATUL 6,3x11" type="Al electrolytic"
+R5 N008 N006 1k8
+XU1 N004 N008 VCC MAC97A8
+D5 N016 VCC BZX84B12VLY
+R6 N015 N014 2k
+R7 N015 N014 2k
+R8 N015 N014 2k
+R9 N015 N014 2k
+C2 VCC 0 100µ V=16 Irms=280m Rser=0.11 Lser=3.5n mfg="Würth Elektronik" pn="860040373002 WCAP-ATUL 6,3x11" type="Al electrolytic"
+C3 N014 N016 0.22µ V=400 Irms=0 Rser=0.0381 Lser=11.951n mfg="Würth Elektronik" pn="890283425002CS WCAP-FTBE 15 x 18 x 11 x 5" type="Box"
+D2 N009 VCC 1N4148
+D3 N011 N012 1N4148
+D4 0 N016 1N4148
+S1 N009 VCC N003 0 HumSensor
+Rsw VCC N003 {RHumSensor}
+V1 VCC N015 SINE(0 311.127 50)
+RL N004 N013 1k2
+L2 N013 N015 5H
+XU2 N009 N009 N005 VDD 0 CD4093B VDD=12 SPEED=1.0 TRIPDT=5e-9
+XU3 N005 N005 N011 VDD 0 CD4093B VDD=12 SPEED=1.0 TRIPDT=5e-9
+XU4 N005 N006 N007 VDD 0 CD4093B VDD=12 SPEED=1.0 TRIPDT=5e-9
+XU5 N007 N012 N006 VDD 0 CD4093B VDD=12 SPEED=1.0 TRIPDT=5e-9
+R10 N003 0 10K
+S3 N015 N001 N002 0 SWPWR
+Rsw2 N001 N002 {RPWR}
+R11 N002 0 10K
+.model D D
+.lib C:\Users\Yasen\AppData\Local\LTspice\lib\cmp\standard.dio
+.model HumSensor SW(Ron=1 Roff=1Meg Vt=2.5 Vh=0)...
+.step param RHumSensor list 1 1e6...
+.tran 0 150u 0 1u
+.include lib/sub/thyristr.lib
+.include lib/sub/CD4000.lib
+.sympath lib/sym
+.step param RPWR list 1 1e6
+.model SWPWR SW(Ron=1 Roff=1Meg Vt=2.5 Vh=0)
+* Load
+.backanno
+.end

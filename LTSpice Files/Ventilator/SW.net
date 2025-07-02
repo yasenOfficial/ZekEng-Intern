@@ -1,9 +1,0 @@
-* D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\SW.asc
-S1 0 N001 N003 0 MYSW
-V1 N003 0 PULSE(0 5 0.5m 1u 1u 0.5m 1m 10)
-R1 N002 N001 1K
-V2 N002 0 3.3
-.model MYSW SW(Ron=1 Roff=1Meg Vt=.5 Vh=-.4)
-.tran 0 2ms 0 1u
-.backanno
-.end

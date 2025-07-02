@@ -1,14 +1,14 @@
 LTspice 24.0.12 for Windows
 Circuit: * D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\NAND Tests.asc
-Start Time: Tue Jul  1 17:20:40 2025
+Start Time: Wed Jul  2 10:56:05 2025
 solver = Normal
 Maximum thread count: 20
 tnom = 27
 temp = 27
 method = modified trap
-WARNING: Less than two connections to node out.  This node is used by r:u2:out:out.
+WARNING: Less than two connections to node out.  This node is used by r:u3:out:out.
 Direct Newton iteration for .op point succeeded.
-Ignoring empty pin current: Ix(u2:vdd)
-Ignoring empty pin current: Ix(u2:vdd)
-Total elapsed time: 0.157 seconds.
+Ignoring empty pin current: Ix(u3:vdd)
+Ignoring empty pin current: Ix(u3:vdd)
+Total elapsed time: 0.064 seconds.
 
