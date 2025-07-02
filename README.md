@@ -120,11 +120,11 @@ https://www.amarketplaceofideas.com/adding-series-4000-cmos-library-to-ltspice.h
 
 `Ventilator\SW.asc`
 
-![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesADDemo.png)
+![Switches Demo Implementation](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesADDemo.png)
 
 И после направих подобна моя имплементация с резисотри вместо импулсен генератор:
 
-![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesCustom.png)
+![Switches Custom Implementation](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SwitchesCustom.png)
 
 
 ## Импортирах и библиотектата с симистора (MAC97A8), който е сложен на платката
@@ -142,4 +142,16 @@ https://github.com/HMGrunthos/InrushTimer/blob/master/thyristr.lib
 ![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PMU11.3V.png)
 ![IndentifyingDefect](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PMU11.6V.png)
 
+Параметри на проблемния кондензатор:
+
+![C params](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Cparams.png)
+
+Pulse current: Rated for 2 A rms at 1 kHz → Доста повече от 1.2 A
+https://www.mouser.bg/ProductDetail/WIMA/FKP1R022205H00KYSD?qs=sGAEpiMZZMsh%252B1woXyUXj5VlawBRZJwFPjr6nKaRZtw%3D
+
+Параметри на проблемните резистори:
+
+![R params](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Rparams.png)
+
+https://www.mouser.bg/ProductDetail/ROHM-Semiconductor/ESR18EZPJ131?qs=493kPxzlxfJ2i%2Fymb6BOsw%3D%3D
 
