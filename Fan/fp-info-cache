@@ -1,4 +1,4 @@
-25208957173011065
+25215963286093628
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2652,6 +2652,27 @@ speaker CUI
 0
 2
 2
+CD4093
+D14
+
+CD4093BM 
+0
+14
+14
+CD4093
+D14-L
+
+CD4093BM 
+0
+14
+14
+CD4093
+D14-M
+
+CD4093BM 
+0
+14
+14
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
@@ -87863,6 +87884,13 @@ TO-264-5 Vertical RM 3.81mm
 0
 5
 5
+Pads
+TestPoint_Top_Hole_D2.0mm
+Plated Hole as test Point, diameter 2.0mm
+test point plated hole
+0
+1
+1
 Potentiometer_SMD
 Potentiometer_ACP_CA6-VSMD_Vertical
 Potentiometer, vertical, ACP CA6-VSMD, http://www.acptechnologies.com/wp-content/uploads/2017/06/01-ACP-CA6.pdf

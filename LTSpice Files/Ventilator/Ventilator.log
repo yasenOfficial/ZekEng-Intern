@@ -1,6 +1,6 @@
 LTspice 24.0.12 for Windows
 Circuit: * D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\Ventilator.asc
-Start Time: Wed Jul  2 11:11:24 2025
+Start Time: Thu Jul  3 10:55:16 2025
 Error on line 3540 : .sympath lib/sym
 	 Unknown control card
 solver = Normal
@@ -11,6 +11,7 @@ Maximum thread count: 20
 c1: Increased Cpar to 1e-10
 c2: Increased Cpar to 1e-10
 c3: Increased Cpar to 2.2e-13
+WARNING: Less than two connections to node n003.  This node is used by s1.
 U1:1:viak: Missing value, assumed 0V @ DC
 U1:1:vika: Missing value, assumed 0V @ DC
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
@@ -21,176 +22,38 @@ Gmin = 0.115292
 Gmin = 0.0123794
 Gmin = 0.00132923
 Gmin = 0.000142725
-vernier = 0.5
-vernier = 0.25
-vernier = 0.125
-vernier = 0.0625
-Gmin = 0.000130259
-vernier = 0.03125
-vernier = 0.015625
-vernier = 0.0078125
-vernier = 0.00390625
-Gmin = 0.000128005
-vernier = 0.00195312
-vernier = 0.000976562
-vernier = 0.000488281
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+Gmin = 2.03704e-09
+Gmin = 2.18725e-10
+Gmin = 2.34854e-11
+Gmin = 2.52173e-12
+Gmin = 2.70769e-13
 Gmin = 0
-Gmin stepping failed
+Gmin stepping succeeded in finding the operating point.
 
-Starting source stepping with srcstepmethod=0
-Source Step = 3.0303%
-Source Step = 25.7576%
-Source Step = 25.9618%
-Source Step = 25.9914%
-Source Step = 26.021%
-Source Step = 26.0505%
-Source Step = 26.0801%
-Source Step = 26.1097%
-vernier = 0.00146484
-Source Step = 26.1541%
-Source Step = 26.1985%
-Source Step = 26.2429%
-Source Step = 26.2873%
-Source Step = 26.3317%
-vernier = 0.00219727
-Source Step = 26.3849%
-Source Step = 26.4515%
-Source Step = 26.5181%
-Source Step = 26.5847%
-Source Step = 26.6513%
-vernier = 0.0032959
-Source Step = 26.7278%
-Source Step = 26.8277%
-Source Step = 26.9276%
-Source Step = 27.0275%
-Source Step = 27.1274%
-vernier = 0.00494385
-Source Step = 27.2372%
-Source Step = 27.387%
-Source Step = 27.5368%
-Source Step = 27.6604%
-Source Step = 27.6979%
-Source Step = 27.7353%
-Source Step = 27.7728%
-Source Step = 27.8103%
-Source Step = 27.8477%
-vernier = 0.00185394
-Source Step = 27.902%
-Source Step = 27.9582%
-Source Step = 28.0144%
-Source Step = 28.0706%
-Source Step = 28.1267%
-vernier = 0.00278091
-Source Step = 28.2054%
-Source Step = 28.2897%
-Source Step = 28.3739%
-Source Step = 28.4582%
-Source Step = 28.5425%
-vernier = 0.00417137
-Source Step = 28.6562%
-Source Step = 28.7826%
-Source Step = 28.909%
-Source Step = 29.0354%
-Source Step = 29.1619%
-vernier = 0.00625706
-Source Step = 29.3262%
-Source Step = 29.5158%
-Source Step = 29.7054%
-Source Step = 29.895%
-Source Step = 30.0846%
-vernier = 0.00938559
-Source Step = 30.3216%
-Source Step = 30.606%
-Source Step = 30.8904%
-Source Step = 31.1749%
-Source Step = 31.4593%
-vernier = 0.0140784
-Source Step = 31.8006%
-Source Step = 32.2272%
-Source Step = 32.6538%
-Source Step = 33.0804%
-Source Step = 33.507%
-vernier = 0.0211176
-Source Step = 33.9976%
-Source Step = 34.6376%
-Source Step = 35.2775%
-Source Step = 35.9174%
-Source Step = 36.5573%
-vernier = 0.0316764
-Source Step = 37.2613%
-Source Step = 38.2212%
-Source Step = 39.181%
-Source Step = 40.1409%
-Source Step = 40.9328%
-Source Step = 41.0228%
-Source Step = 41.0828%
-Source Step = 41.1428%
-Source Step = 41.2028%
-Source Step = 41.2628%
-vernier = 0.00296966
-Source Step = 41.3288%
-Source Step = 41.4188%
-Source Step = 41.5088%
-Source Step = 41.5988%
-Source Step = 41.6888%
-vernier = 0.00445449
-Source Step = 41.7832%
-Source Step = 41.9182%
-Source Step = 42.0532%
-Source Step = 42.1882%
-Source Step = 42.3232%
-Source Step = 42.4582%
-vernier = 0.00668173
-Source Step = 42.6606%
-Source Step = 42.8631%
-Source Step = 43.0656%
-Source Step = 43.2681%
-Source Step = 43.4705%
-vernier = 0.0100226
-Source Step = 43.7641%
-Source Step = 44.0679%
-Source Step = 44.3716%
-Source Step = 44.6753%
-Source Step = 44.979%
-vernier = 0.0150339
-Source Step = 45.4042%
-Source Step = 45.8598%
-Source Step = 46.3153%
-Source Step = 46.7709%
-Source Step = 47.2265%
-vernier = 0.0225508
-Source Step = 47.8415%
-Source Step = 48.5249%
-Source Step = 49.2082%
-Source Step = 49.8916%
-Source Step = 50.575%
-vernier = 0.0338263
-Source Step = 51.4633%
-Source Step = 52.4884%
-Source Step = 53.5134%
-Source Step = 54.5384%
-Source Step = 55.5635%
-vernier = 0.0507394
-Source Step = 56.8448%
-Source Step = 58.3823%
-Source Step = 59.9199%
-Source Step = 61.4574%
-Source Step = 62.995%
-vernier = 0.0761091
-Source Step = 64.8401%
-Source Step = 67.1464%
-Source Step = 69.4527%
-Source Step = 71.7591%
-Source Step = 74.0654%
-vernier = 0.114164
-Source Step = 76.1123%
-Starting source stepping with srcstepmethod=1
-Source Step = 3.0303%
-Source Step = 33.3333%
-Source Step = 58.3333%
-vernier = 0.0625
-Source Step = 57.996%
-Source stepping failed
+Ignoring empty pin current: Ix(u2:vdd)
+Ignoring empty pin current: Ix(u3:vdd)
+Ignoring empty pin current: Ix(u4:vdd)
+Ignoring empty pin current: Ix(u5:vdd)
+Ignoring empty pin current: Ix(u2:vdd)
+Ignoring empty pin current: Ix(u3:vdd)
+Ignoring empty pin current: Ix(u4:vdd)
+Ignoring empty pin current: Ix(u5:vdd)
+.step rhumsensor=1 rpwr=1
 
-Pseudo Transient failed in finding the operating point at 58.1302 ms.
-Trouble finding operating point....skipping operating point for Transient analysis.
+
+
+.step rhumsensor=1000000 rpwr=1
+
+
+
+.step rhumsensor=1 rpwr=1000000
+tnom = 27
+temp = 27
+method = modified trap
+.step rhumsensor=1000000 rpwr=1000000
+Total elapsed time: 0.238 seconds.
+

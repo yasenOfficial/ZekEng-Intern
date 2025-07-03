@@ -161,6 +161,13 @@ https://www.mouser.bg/ProductDetail/ROHM-Semiconductor/ESR18EZPJ131?qs=493kPxzlx
 
 ![SchematicFanV1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SchematicFanV1.png)
 
-- сменен е 220nF-овия кондензатор
+- сменен е 220nF-овия кондензатор, избрания от вчера (02.07.2025 се оказва голям за платка (трябва да се събера в 14.5mm x 32.5mm))
+
+https://www.mouser.bg/ProductDetail/WIMA/MKP4J022203C00KI00?qs=sJjjjplDs9tWJMp1Tfr4Pw%3D%3D
+
 - сменена е топологията на резисторите (вече са последователни, а не паралелни)
 - избран е нов ценеров диод, тъй като стария е неизвестен
+
+Започната е работа по платката:
+
+![SchematicFanV1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBFanV1.png)

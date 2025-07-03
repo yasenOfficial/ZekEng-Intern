@@ -1174,6 +1174,113 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -1474,6 +1581,156 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1598,7 +1855,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:1N4148W"
+		(symbol "Diode:1N4148WS"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1616,7 +1873,7 @@
 					)
 				)
 			)
-			(property "Value" "1N4148W"
+			(property "Value" "1N4148WS"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -1624,7 +1881,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Diode_SMD:D_SOD-123"
+			(property "Footprint" "Diode_SMD:D_SOD-323"
 				(at 0 -4.445 0)
 				(effects
 					(font
@@ -1633,7 +1890,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
+			(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1642,7 +1899,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
+			(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1678,7 +1935,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "D*SOD?123*"
+			(property "ki_fp_filters" "D*SOD?323*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1687,7 +1944,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "1N4148W_0_1"
+			(symbol "1N4148WS_0_1"
 				(polyline
 					(pts
 						(xy -1.27 1.27) (xy -1.27 -1.27)
@@ -1725,7 +1982,7 @@
 					)
 				)
 			)
-			(symbol "1N4148W_1_1"
+			(symbol "1N4148WS_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -1755,281 +2012,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Diode:BZX84Cxx"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "BZX84Cxx"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "300mW Zener Diode, SOT-23"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "zener diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "BZX84Cxx_0_1"
-				(polyline
-					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy -1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "BZX84Cxx_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 1.27 0 180)
-					(length 2.54)
-					(hide yes)
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(property "Reference" "H"
-				(at 0 6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "MountingHole_Pad"
-				(at 0 4.445 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Mounting Hole with connection"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "mounting hole"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "MountingHole*Pad*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "MountingHole_Pad_0_1"
-				(circle
-					(center 0 1.27)
-					(radius 1.27)
-					(stroke
-						(width 1.27)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "MountingHole_Pad_1_1"
-				(pin input line
-					(at 0 -2.54 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2678,7 +2660,7 @@
 		(at 181.61 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1e76847e-4c41-4f2f-a672-92efbc24083c")
+		(uuid "26446eef-8437-448f-a6c1-56177c1dedec")
 	)
 	(junction
 		(at 114.3 80.01)
@@ -3437,6 +3419,94 @@
 		(uuid "fe274b7f-e042-4e73-8ca1-e1126ac8f664")
 	)
 	(symbol
+		(lib_id "Diode:1N4148WS")
+		(at 48.26 62.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "019d8014-9788-4809-a8d4-2f2b8b4b2eaa")
+		(property "Reference" "D8"
+			(at 50.8 60.9599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 50.8 63.4999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 43.815 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+			(at 48.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+			(at 48.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 48.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "7172cf15-535f-4808-9f19-64a2da5a9ec1")
+		)
+		(pin "1"
+			(uuid "aee68ffc-2984-494d-b043-fa2dd4272a79")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "4xxx:HEF4093B")
 		(at 78.74 72.39 0)
 		(unit 4)
@@ -3548,7 +3618,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1fc13d41-5c1d-4d62-ad73-4ff95164f73d")
-		(property "Reference" "R3"
+		(property "Reference" "R103"
 			(at 223.52 91.694 90)
 			(effects
 				(font
@@ -3609,7 +3679,7 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R3")
+					(reference "R103")
 					(unit 1)
 				)
 			)
@@ -3624,7 +3694,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "25fc62d2-01d1-4132-8bc2-bfd05c4edcb0")
-		(property "Reference" "R2"
+		(property "Reference" "R102"
 			(at 214.63 91.694 90)
 			(effects
 				(font
@@ -3685,7 +3755,7 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R2")
+					(reference "R102")
 					(unit 1)
 				)
 			)
@@ -3758,41 +3828,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148W")
-		(at 109.22 80.01 180)
+		(lib_id "Connector:TestPoint")
+		(at 242.57 81.28 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "31904801-e112-4739-b211-47229f94a954")
-		(property "Reference" "D6"
-			(at 108.966 77.47 0)
+		(fields_autoplaced yes)
+		(uuid "3bcfbff0-a2a1-4053-baaf-657673ecf9b8")
+		(property "Reference" "TP4"
+			(at 247.65 80.0099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "1N4148W"
-			(at 102.616 81.28 0)
+		(property "Value" "TestPoint"
+			(at 247.65 82.5499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 109.22 75.565 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 109.22 80.01 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
+			(at 242.57 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3800,8 +3864,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
-			(at 109.22 80.01 0)
+		(property "Datasheet" "~"
+			(at 242.57 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3809,17 +3873,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "D"
-			(at 109.22 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 109.22 80.01 0)
+		(property "Description" "test point"
+			(at 242.57 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3828,15 +3883,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "07205160-2031-4a8c-9a45-cd67a1927cbd")
-		)
-		(pin "2"
-			(uuid "81c20bb2-fd08-416d-af7a-1122fbe7cec2")
+			(uuid "42abc930-ccdc-4ec8-b599-59cbc57d84be")
 		)
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "D6")
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -3896,46 +3948,46 @@
 			)
 		)
 		(pin "5"
-			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b2d")
+			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b2e")
 		)
 		(pin "10"
-			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56122")
+			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56123")
 		)
 		(pin "2"
-			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c3")
+			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c4")
 		)
 		(pin "4"
-			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb535e")
+			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb535f")
 		)
 		(pin "3"
-			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6916")
+			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6917")
 		)
 		(pin "6"
-			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd72158")
+			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd72159")
 		)
 		(pin "1"
-			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc1222f")
+			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc12230")
 		)
 		(pin "9"
-			(uuid "81a8138a-0849-456d-81b7-cd6d55d3684e")
+			(uuid "81a8138a-0849-456d-81b7-cd6d55d3684f")
 		)
 		(pin "12"
-			(uuid "55177513-7f94-40b2-81dd-44be19ef0564")
+			(uuid "55177513-7f94-40b2-81dd-44be19ef0565")
 		)
 		(pin "13"
-			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b190")
+			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b191")
 		)
 		(pin "11"
-			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949865")
+			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949866")
 		)
 		(pin "8"
-			(uuid "34721bcd-215e-4155-8106-a41757079882")
+			(uuid "34721bcd-215e-4155-8106-a41757079883")
 		)
 		(pin "14"
-			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d531")
+			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d532")
 		)
 		(pin "7"
-			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc0")
+			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc1")
 		)
 		(instances
 			(project ""
@@ -3971,7 +4023,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L26.5mm_W7.0mm_P22.50mm_MKS4"
+		(property "Footprint" "Capacitor_THT:C_Rect_L11.5mm_W4.5mm_P10.00mm_MKT"
 			(at 195.58 87.9348 0)
 			(effects
 				(font
@@ -3991,6 +4043,15 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 191.77 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.mouser.bg/ProductDetail/WIMA/MKP4J022203C00KI00?qs=sJjjjplDs9tWJMp1Tfr4Pw%3D%3D"
+			(at 191.77 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4159,108 +4220,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 245.11 49.53 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4c17b615-1ad9-499d-992c-b618c98be429")
-		(property "Reference" "H2"
-			(at 248.92 48.2599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 248.92 50.7999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
-			(at 245.11 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 245.11 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 245.11 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ca7be51f-fbdd-493c-9629-644442e448a6")
-		)
-		(instances
-			(project "Fan"
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4148W")
-		(at 48.26 62.23 270)
+		(lib_id "Diode:1N4148WS")
+		(at 109.22 80.01 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4c9c7466-72d0-469c-937c-9369b5201993")
-		(property "Reference" "D4"
-			(at 51.054 62.23 0)
+		(fields_autoplaced yes)
+		(uuid "52dc4886-01bc-45d5-86f2-a4a2bc6c220a")
+		(property "Reference" "D9"
+			(at 109.22 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1N4148W"
-			(at 53.594 62.23 0)
+		(property "Value" "1N4148WS"
+			(at 109.22 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 43.815 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 48.26 62.23 0)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 109.22 75.565 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4268,8 +4254,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
-			(at 48.26 62.23 0)
+		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+			(at 109.22 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+			(at 109.22 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4278,7 +4273,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 48.26 62.23 0)
+			(at 109.22 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4287,7 +4282,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 48.26 62.23 0)
+			(at 109.22 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4295,16 +4290,16 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "538bd29c-130a-4ce3-aaad-bc6f2aeba5f3")
-		)
 		(pin "2"
-			(uuid "936cb593-dce5-4c5a-9b85-6d96a3668154")
+			(uuid "ecd621de-8587-4c59-923f-f5b43edd5991")
+		)
+		(pin "1"
+			(uuid "626caa1e-4063-409f-b17e-94fa6bc78606")
 		)
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "D4")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -4446,125 +4441,52 @@
 			)
 		)
 		(pin "5"
-			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b2d")
+			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b2f")
 		)
 		(pin "10"
-			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56122")
+			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56124")
 		)
 		(pin "2"
-			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c3")
+			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c5")
 		)
 		(pin "4"
-			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb535e")
+			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb5360")
 		)
 		(pin "3"
-			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6916")
+			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6918")
 		)
 		(pin "6"
-			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd72158")
+			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd7215a")
 		)
 		(pin "1"
-			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc1222f")
+			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc12231")
 		)
 		(pin "9"
-			(uuid "81a8138a-0849-456d-81b7-cd6d55d3684e")
+			(uuid "81a8138a-0849-456d-81b7-cd6d55d36850")
 		)
 		(pin "12"
-			(uuid "55177513-7f94-40b2-81dd-44be19ef0564")
+			(uuid "55177513-7f94-40b2-81dd-44be19ef0566")
 		)
 		(pin "13"
-			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b190")
+			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b192")
 		)
 		(pin "11"
-			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949865")
+			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949867")
 		)
 		(pin "8"
-			(uuid "34721bcd-215e-4155-8106-a41757079882")
+			(uuid "34721bcd-215e-4155-8106-a41757079884")
 		)
 		(pin "14"
-			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d531")
+			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d533")
 		)
 		(pin "7"
-			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc0")
+			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc2")
 		)
 		(instances
 			(project ""
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
 					(reference "U2")
 					(unit 2)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:BZX84Cxx")
-		(at 181.61 83.82 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6726f3ae-2a35-469d-973c-d6f7272fe55b")
-		(property "Reference" "D2"
-			(at 184.15 82.5499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BZX84Cxx"
-			(at 184.15 85.0899 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 181.61 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf"
-			(at 181.61 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "300mW Zener Diode, SOT-23"
-			(at 181.61 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "b64b7737-1477-441f-8211-7ad8f40d9a40")
-		)
-		(pin "2"
-			(uuid "8ee24eeb-6182-4b5c-9afd-5b2eb8a1b147")
-		)
-		(pin "1"
-			(uuid "f5b3d4eb-e6a8-4588-bd26-2c082cd987ca")
-		)
-		(instances
-			(project ""
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "D2")
-					(unit 1)
 				)
 			)
 		)
@@ -4578,7 +4500,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6b8d57df-31e6-4249-8dc0-beb6f649d57b")
-		(property "Reference" "R9"
+		(property "Reference" "R3"
 			(at 110.49 69.596 0)
 			(effects
 				(font
@@ -4639,7 +4561,74 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R9")
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 242.57 49.53 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f463d36-ec4a-469a-9e75-c9c6750f73dd")
+		(property "Reference" "TP2"
+			(at 247.65 48.2599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 247.65 50.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
+			(at 242.57 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 242.57 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 242.57 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "925b6dfc-3a59-48b7-b7d0-edb18a27fda4")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -4778,73 +4767,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 245.11 81.28 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7acf9322-7ffb-478e-885f-e9aab2ccae43")
-		(property "Reference" "H4"
-			(at 248.92 80.0099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 248.92 82.5499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
-			(at 245.11 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 245.11 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 245.11 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b5fbb35a-3657-4e17-8bed-082305f4b85d")
-		)
-		(instances
-			(project "Fan"
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "4xxx:HEF4093B")
 		(at 132.08 77.47 0)
 		(mirror x)
@@ -4898,51 +4820,130 @@
 			)
 		)
 		(pin "5"
-			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b2d")
+			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b30")
 		)
 		(pin "10"
-			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56122")
+			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56125")
 		)
 		(pin "2"
-			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c3")
+			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c6")
 		)
 		(pin "4"
-			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb535e")
+			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb5361")
 		)
 		(pin "3"
-			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6916")
+			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6919")
 		)
 		(pin "6"
-			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd72158")
+			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd7215b")
 		)
 		(pin "1"
-			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc1222f")
+			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc12232")
 		)
 		(pin "9"
-			(uuid "81a8138a-0849-456d-81b7-cd6d55d3684e")
+			(uuid "81a8138a-0849-456d-81b7-cd6d55d36851")
 		)
 		(pin "12"
-			(uuid "55177513-7f94-40b2-81dd-44be19ef0564")
+			(uuid "55177513-7f94-40b2-81dd-44be19ef0567")
 		)
 		(pin "13"
-			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b190")
+			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b193")
 		)
 		(pin "11"
-			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949865")
+			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949868")
 		)
 		(pin "8"
-			(uuid "34721bcd-215e-4155-8106-a41757079882")
+			(uuid "34721bcd-215e-4155-8106-a41757079885")
 		)
 		(pin "14"
-			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d531")
+			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d534")
 		)
 		(pin "7"
-			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc0")
+			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc3")
 		)
 		(instances
 			(project ""
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 181.61 83.82 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "830439c2-f64f-46cb-9bcd-810ae27f2ae3")
+		(property "Reference" "DZ1"
+			(at 184.15 82.5499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "BZX84J-C12,115"
+			(at 184.15 85.0899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323F"
+			(at 181.61 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 181.61 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "300mW Zener Diode, SOD-323F-2"
+			(at 181.61 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "URL" "https://www.mouser.bg/ProductDetail/Nexperia/BZX84J-C12115?qs=me8TqzrmIYU5WM660R%252B0Jg%3D%3D"
+			(at 181.61 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f6c1310b-ce53-4130-afc8-edb87cbb1a51")
+		)
+		(pin "2"
+			(uuid "d960b685-bf08-46fe-a749-adb854acf2d6")
+		)
+		(instances
+			(project ""
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "DZ1")
 					(unit 1)
 				)
 			)
@@ -4957,7 +4958,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "865d0d04-3198-47a7-9854-ec1473682a68")
-		(property "Reference" "R6"
+		(property "Reference" "R7"
 			(at 65.024 81.28 0)
 			(effects
 				(font
@@ -5018,7 +5019,7 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R6")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -5033,7 +5034,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9027b0ce-8d1b-4ac6-a8b0-757bee3f6039")
-		(property "Reference" "R7"
+		(property "Reference" "R6"
 			(at 35.814 81.28 0)
 			(effects
 				(font
@@ -5094,7 +5095,7 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R7")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -5109,7 +5110,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9c1dbd46-7e52-4c72-affc-6faeb3a8261f")
-		(property "Reference" "R4"
+		(property "Reference" "R104"
 			(at 232.41 91.694 90)
 			(effects
 				(font
@@ -5170,7 +5171,7 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R4")
+					(reference "R104")
 					(unit 1)
 				)
 			)
@@ -5231,46 +5232,46 @@
 			)
 		)
 		(pin "5"
-			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b2d")
+			(uuid "bb63a0a0-16e7-40e2-bdd9-ca92e01d1b31")
 		)
 		(pin "10"
-			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56122")
+			(uuid "747bffa3-0362-4ecc-be67-4a3d7ba56126")
 		)
 		(pin "2"
-			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c3")
+			(uuid "9cbc8d44-1147-4817-aa2d-628840f9d5c7")
 		)
 		(pin "4"
-			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb535e")
+			(uuid "62eb981b-be1d-43d2-8478-7d0e18bb5362")
 		)
 		(pin "3"
-			(uuid "526ddae3-7a4a-4779-97cf-940ea10f6916")
+			(uuid "526ddae3-7a4a-4779-97cf-940ea10f691a")
 		)
 		(pin "6"
-			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd72158")
+			(uuid "c5e3e3fe-4aca-4173-8223-c3352cd7215c")
 		)
 		(pin "1"
-			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc1222f")
+			(uuid "f8ccd3cd-c358-4567-96c9-1f307bc12233")
 		)
 		(pin "9"
-			(uuid "81a8138a-0849-456d-81b7-cd6d55d3684e")
+			(uuid "81a8138a-0849-456d-81b7-cd6d55d36852")
 		)
 		(pin "12"
-			(uuid "55177513-7f94-40b2-81dd-44be19ef0564")
+			(uuid "55177513-7f94-40b2-81dd-44be19ef0568")
 		)
 		(pin "13"
-			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b190")
+			(uuid "a18ea878-8171-4fe2-acef-5d02ad97b194")
 		)
 		(pin "11"
-			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949865")
+			(uuid "147975bd-3f55-4df7-a9e1-d4dcb8949869")
 		)
 		(pin "8"
-			(uuid "34721bcd-215e-4155-8106-a41757079882")
+			(uuid "34721bcd-215e-4155-8106-a41757079886")
 		)
 		(pin "14"
-			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d531")
+			(uuid "3711cf54-3b52-45ba-b84a-567e9ee4d535")
 		)
 		(pin "7"
-			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc0")
+			(uuid "e418f1f7-63eb-40e2-aacc-460592d35cc4")
 		)
 		(instances
 			(project ""
@@ -5290,7 +5291,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a7efef55-07a9-481e-9f5a-3de59e007923")
-		(property "Reference" "R5"
+		(property "Reference" "R1"
 			(at 35.814 55.88 0)
 			(effects
 				(font
@@ -5351,48 +5352,42 @@
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R5")
+					(reference "R1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148W")
-		(at 173.99 88.9 180)
+		(lib_id "Connector:TestPoint")
+		(at 242.57 88.9 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a852b926-9dee-4c26-bf09-d17f2332564e")
-		(property "Reference" "D1"
-			(at 173.99 91.694 0)
+		(fields_autoplaced yes)
+		(uuid "a9446e75-3c8a-4aab-9200-7747c48386c5")
+		(property "Reference" "TP5"
+			(at 247.65 87.6299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "1N4148W"
-			(at 173.99 94.234 0)
+		(property "Value" "TestPoint"
+			(at 247.65 90.1699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 173.99 84.455 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 173.99 88.9 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
+			(at 242.57 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5400,8 +5395,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
-			(at 173.99 88.9 0)
+		(property "Datasheet" "~"
+			(at 242.57 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5409,17 +5404,8 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "D"
-			(at 173.99 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 173.99 88.9 0)
+		(property "Description" "test point"
+			(at 242.57 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5428,15 +5414,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "75ba2a03-5b21-4140-baca-b0b0e9541c7e")
-		)
-		(pin "2"
-			(uuid "f4c13a30-9c39-4f54-9851-977273155997")
+			(uuid "8e45ba2f-23ad-426f-92ad-c59bb5c54366")
 		)
 		(instances
-			(project ""
+			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "D1")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -5509,102 +5492,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148W")
-		(at 41.91 72.39 180)
+		(lib_id "Connector:TestPoint")
+		(at 242.57 38.1 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b1ed412f-b547-47c9-8b33-4d53664450d2")
-		(property "Reference" "D3"
-			(at 41.91 75.184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148W"
-			(at 41.91 77.724 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
-			(at 41.91 67.945 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
-			(at 41.91 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
-			(at 41.91 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 41.91 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 41.91 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "08fd7b67-6879-4aa0-813d-528686aa4803")
-		)
-		(pin "2"
-			(uuid "3106d87e-fc7b-4d3b-a31e-74be19f03472")
-		)
-		(instances
-			(project "Fan"
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 245.11 88.9 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c3e1e602-25da-4388-bb28-b82d914026e8")
-		(property "Reference" "H5"
-			(at 248.92 87.6299 90)
+		(uuid "b953894a-34bf-40e2-9993-b6bf2e7f60c4")
+		(property "Reference" "TP1"
+			(at 247.65 36.8299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5612,8 +5510,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole_Pad"
-			(at 248.92 90.1699 90)
+		(property "Value" "TestPoint"
+			(at 247.65 39.3699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5621,8 +5519,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
-			(at 245.11 88.9 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
+			(at 242.57 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5631,7 +5529,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 88.9 0)
+			(at 242.57 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5639,8 +5537,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
-			(at 245.11 88.9 0)
+		(property "Description" "test point"
+			(at 242.57 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5649,29 +5547,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "bf7d51f9-b4a2-4868-ad58-1da8ab79c93d")
+			(uuid "ff76de9b-af84-433b-ac6e-37b6d731a3b2")
 		)
 		(instances
-			(project "Fan"
+			(project ""
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "H5")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 245.11 67.31 270)
+		(lib_id "Connector:TestPoint")
+		(at 242.57 67.31 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c6434cac-aad6-4afb-9e6b-cdb60363a243")
-		(property "Reference" "H3"
-			(at 248.92 66.0399 90)
+		(uuid "c40c59df-51af-453a-9153-a8b34208c9a4")
+		(property "Reference" "TP3"
+			(at 247.65 66.0399 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5679,8 +5577,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MountingHole_Pad"
-			(at 248.92 68.5799 90)
+		(property "Value" "TestPoint"
+			(at 247.65 68.5799 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5688,8 +5586,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
-			(at 245.11 67.31 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
+			(at 242.57 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5698,7 +5596,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 245.11 67.31 0)
+			(at 242.57 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5706,8 +5604,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Mounting Hole with connection"
-			(at 245.11 67.31 0)
+		(property "Description" "test point"
+			(at 242.57 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5716,12 +5614,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a9477eae-1248-4f6c-9dc9-35e073af8062")
+			(uuid "7878ed86-4a4a-41de-8e75-3587109c8968")
 		)
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "H3")
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -5736,7 +5634,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c6b28499-b53b-4dc5-84ff-4ef79c266135")
-		(property "Reference" "R1"
+		(property "Reference" "R101"
 			(at 205.74 91.694 90)
 			(effects
 				(font
@@ -5797,7 +5695,179 @@
 		(instances
 			(project ""
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "R1")
+					(reference "R101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148WS")
+		(at 173.99 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca5eb79e-0d16-4467-bb64-f3975b6d742f")
+		(property "Reference" "D10"
+			(at 173.99 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 173.99 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 173.99 84.455 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 173.99 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "80156828-bdcb-4c42-958f-48105f73523d")
+		)
+		(pin "1"
+			(uuid "00455016-2f45-4d41-a004-441c666af6da")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148WS")
+		(at 41.91 72.39 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc739b4c-5cc3-496d-b89e-9613b485574a")
+		(property "Reference" "D7"
+			(at 41.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148WS"
+			(at 41.91 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 41.91 67.945 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/85751/1n4148ws.pdf"
+			(at 41.91 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "75V 0.15A Fast switching Diode, SOD-323"
+			(at 41.91 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 41.91 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 41.91 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a82bb5a5-df5c-4c79-ba00-e770643a7129")
+		)
+		(pin "1"
+			(uuid "31365dbb-989f-4dfa-b550-9d0b4dd3a96f")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -5933,73 +6003,6 @@
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
 					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole_Pad")
-		(at 245.11 38.1 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "fe3707c5-f087-487e-9090-9cdfd1d6963d")
-		(property "Reference" "H1"
-			(at 248.92 36.8299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole_Pad"
-			(at 248.92 39.3699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad_TopBottom"
-			(at 245.11 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 245.11 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole with connection"
-			(at 245.11 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "09f52d70-2209-40e6-b221-dfe6805186c8")
-		)
-		(instances
-			(project ""
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "H1")
 					(unit 1)
 				)
 			)
