@@ -170,4 +170,11 @@ https://www.mouser.bg/ProductDetail/WIMA/MKP4J022203C00KI00?qs=sJjjjplDs9tWJMp1T
 
 Започната е работа по платката:
 
-![SchematicFanV1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBFanV1.png)
+![PCBFanV1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBFanV1.png)
+
+Начерах Custom TP, Diameter 2.0mm, drill 1.0mm, Pad само на свързана страна
+![TestPoint_Top_Hole_Only_D2.0mm](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/TestPoint_Top_Hole_Only_D2.0mm.png)
+
+
+Платката и схемата за предадени за обратна връзка на екипа от ЗекЕнг, със сигурност трябва да се добави медна зона за земя (GND) и да се оправи place-ment-a на резисторите R21, R22, R23, R24
+![PCBFanV1.1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBFanV1.1.png)
