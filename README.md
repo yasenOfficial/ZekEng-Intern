@@ -155,3 +155,12 @@ https://www.mouser.bg/ProductDetail/WIMA/FKP1R022205H00KYSD?qs=sGAEpiMZZMsh%252B
 
 https://www.mouser.bg/ProductDetail/ROHM-Semiconductor/ESR18EZPJ131?qs=493kPxzlxfJ2i%2Fymb6BOsw%3D%3D
 
+# Ден 3 - 03.07.2025
+
+Започната е работа по схемата:
+
+![SchematicFanV1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/SchematicFanV1.png)
+
+- сменен е 220nF-овия кондензатор
+- сменена е топологията на резисторите (вече са последователни, а не паралелни)
+- избран е нов ценеров диод, тъй като стария е неизвестен

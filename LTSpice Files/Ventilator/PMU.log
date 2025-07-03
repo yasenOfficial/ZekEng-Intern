@@ -1,6 +1,6 @@
 LTspice 24.0.12 for Windows
 Circuit: * D:\Projects\ZekEng-Intern\LTSpice Files\Ventilator\PMU.asc
-Start Time: Wed Jul  2 14:02:09 2025
+Start Time: Thu Jul  3 09:15:17 2025
 Error on line 3520 : .sympath lib/sym
 	 Unknown control card
 solver = Normal
@@ -11,5 +11,5 @@ method = modified trap
 c2: Increased Cpar to 1e-10
 c3: Increased Cpar to 2.2e-13
 Direct Newton iteration for .op point succeeded.
-Total elapsed time: 0.057 seconds.
+Total elapsed time: 0.136 seconds.
 
