@@ -2022,226 +2022,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Sensor_Optical:BPW40"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "BPW40"
-				(at 5.08 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "LED_THT:LED_D5.0mm_Clear"
-				(at 12.192 -3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://www.rcscomponents.kiev.ua/datasheets/bpw40.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Phototransistor NPN"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "npn phototransistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "LED*D5.0mm*Clear*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "BPW40_0_1"
-				(polyline
-					(pts
-						(xy -3.81 3.175) (xy -1.905 1.27) (xy -1.905 1.905)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.175 4.445) (xy -1.27 2.54) (xy -1.27 3.175)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy -1.905 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 1.27 0)
-					(radius 2.8194)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(symbol "BPW40_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "E"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Triac_Thyristor:Generic_Triac_A1GA2"
 			(pin_names
 				(offset 0)
@@ -2770,7 +2550,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 72.39) (xy 62.23 69.85)
+			(xy 62.23 72.39) (xy 62.23 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3610,6 +3390,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 62.23 66.04 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1d3783f1-a91a-454c-8b99-b5da3d9f54a6")
+		(property "Reference" "HS2"
+			(at 67.31 64.7699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 67.31 67.3099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
+			(at 62.23 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 62.23 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f45d5e87-c614-4f69-86a2-0c73050ed57e")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "HS2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 223.52 88.9 270)
 		(unit 1)
@@ -3829,16 +3676,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 81.28 270)
+		(at 62.23 59.69 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3bcfbff0-a2a1-4053-baaf-657673ecf9b8")
-		(property "Reference" "TP4"
-			(at 247.65 80.0099 90)
+		(uuid "3def55f2-6858-476d-a2ff-512b283f110b")
+		(property "Reference" "HS1"
+			(at 67.31 58.4199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3847,7 +3694,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 247.65 82.5499 90)
+			(at 67.31 60.9599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3855,8 +3702,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
-			(at 242.57 86.36 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
+			(at 62.23 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3865,7 +3712,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 86.36 0)
+			(at 62.23 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3874,7 +3721,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 81.28 0)
+			(at 62.23 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3883,12 +3730,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "42abc930-ccdc-4ec8-b599-59cbc57d84be")
+			(uuid "5079ed69-c2b6-46ef-92da-725fed9dd2da")
 		)
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "TP4")
+					(reference "HS1")
 					(unit 1)
 				)
 			)
@@ -4023,7 +3870,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L11.5mm_W4.5mm_P10.00mm_MKT"
+		(property "Footprint" "Capacitors:C_Rect_L11.5mm_W4.5mm_P10.00mm_MKT_DoublePad"
 			(at 195.58 87.9348 0)
 			(effects
 				(font
@@ -4050,7 +3897,7 @@
 				(hide yes)
 			)
 		)
-		(property "URL" "https://www.mouser.bg/ProductDetail/WIMA/MKP4J022203C00KI00?qs=sJjjjplDs9tWJMp1Tfr4Pw%3D%3D"
+		(property "URL" "https://www.mouser.bg/ProductDetail/WIMA/MKP4J032204J00KSSD?qs=sJjjjplDs9tNFMTkeYgn1g%3D%3D"
 			(at 191.77 88.9 90)
 			(effects
 				(font
@@ -4177,7 +4024,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm"
+		(property "Footprint" "Capacitors:C_Radial_D5.0mm_H11.0mm_P2.00mm_Lying"
 			(at 166.0652 87.63 0)
 			(effects
 				(font
@@ -4299,6 +4146,73 @@
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
 					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 242.57 88.9 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5ba1267f-8159-4cde-9bf5-f076085317ea")
+		(property "Reference" "TP5"
+			(at 247.65 87.6299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 247.65 90.1699 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
+			(at 242.57 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 242.57 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 242.57 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b627a971-80b2-47ef-951f-2afd816bb8e4")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -4491,6 +4405,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 242.57 67.31 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63f2504e-4867-4cfd-b524-eda19b16a0be")
+		(property "Reference" "TP3"
+			(at 247.65 66.0399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 247.65 68.5799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
+			(at 242.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 242.57 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 242.57 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e724a332-f818-4e2c-ae60-f4352043f963")
+		)
+		(instances
+			(project "Fan"
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "TP3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 110.49 72.39 90)
 		(unit 1)
@@ -4561,73 +4542,6 @@
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
 					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 242.57 49.53 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6f463d36-ec4a-469a-9e75-c9c6750f73dd")
-		(property "Reference" "TP2"
-			(at 247.65 48.2599 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 247.65 50.7999 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
-			(at 242.57 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 242.57 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 242.57 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "925b6dfc-3a59-48b7-b7d0-edb18a27fda4")
-		)
-		(instances
-			(project "Fan"
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -5358,73 +5272,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 242.57 88.9 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a9446e75-3c8a-4aab-9200-7747c48386c5")
-		(property "Reference" "TP5"
-			(at 247.65 87.6299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 247.65 90.1699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
-			(at 242.57 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 242.57 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 242.57 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e45ba2f-23ad-426f-92ad-c59bb5c54366")
-		)
-		(instances
-			(project "Fan"
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+12V")
 		(at 62.23 49.53 0)
 		(unit 1)
@@ -5518,7 +5365,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
 			(at 242.57 43.18 0)
 			(effects
 				(font
@@ -5559,16 +5406,16 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 242.57 67.31 270)
+		(at 242.57 49.53 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "c40c59df-51af-453a-9153-a8b34208c9a4")
-		(property "Reference" "TP3"
-			(at 247.65 66.0399 90)
+		(uuid "bd5094be-5f3b-4366-ba2b-2dec6d84cc8d")
+		(property "Reference" "TP2"
+			(at 247.65 48.2599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5577,7 +5424,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 247.65 68.5799 90)
+			(at 247.65 50.7999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5585,8 +5432,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Pads:TestPoint_Top_Hole_D2.0mm"
-			(at 242.57 72.39 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
+			(at 242.57 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5595,7 +5442,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 242.57 72.39 0)
+			(at 242.57 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5604,7 +5451,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 242.57 67.31 0)
+			(at 242.57 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5613,12 +5460,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7878ed86-4a4a-41de-8e75-3587109c8968")
+			(uuid "f534a36d-bda2-421d-abbd-1033d725bde5")
 		)
 		(instances
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "TP3")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -5965,7 +5812,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm"
+		(property "Footprint" "Capacitors:C_Radial_D5.0mm_H11.0mm_P2.00mm_Lying"
 			(at 115.2652 87.63 0)
 			(effects
 				(font
@@ -6008,17 +5855,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Sensor_Optical:BPW40")
-		(at 59.69 64.77 0)
+		(lib_id "Connector:TestPoint")
+		(at 242.57 81.28 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fe6c8fea-09b3-4759-b3cb-fca56fc6f006")
-		(property "Reference" "Q1"
-			(at 64.77 62.7506 0)
+		(uuid "fcd8b020-ff88-484c-b693-1a5395f815d2")
+		(property "Reference" "TP4"
+			(at 247.65 80.0099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6026,8 +5873,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Hum Sensor"
-			(at 64.77 65.2906 0)
+		(property "Value" "TestPoint"
+			(at 247.65 82.5499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6035,8 +5882,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm_Clear"
-			(at 71.882 68.326 0)
+		(property "Footprint" "Pads:TestPoint_Top_Hole_D1.8x1.1mm"
+			(at 242.57 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6044,8 +5891,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.rcscomponents.kiev.ua/datasheets/bpw40.pdf"
-			(at 59.69 64.77 0)
+		(property "Datasheet" "~"
+			(at 242.57 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6053,25 +5900,22 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Phototransistor NPN"
-			(at 59.69 64.77 0)
+		(property "Description" "test point"
+			(at 242.57 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(pin "2"
-			(uuid "29c1107c-9d7d-484d-a523-138fea132521")
 		)
 		(pin "1"
-			(uuid "59fb0991-a229-42ea-a4bf-b65963af0a76")
+			(uuid "47023f76-d50a-48f5-8647-767357c8695c")
 		)
 		(instances
-			(project ""
+			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "Q1")
+					(reference "TP4")
 					(unit 1)
 				)
 			)

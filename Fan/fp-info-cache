@@ -1,4 +1,4 @@
-25215963286173552
+25219466592581884
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6564,6 +6564,20 @@ Tantalum Capacitor SMD AVX-U (7361-438 Metric), IPC-7352 nominal, (Body size fro
 capacitor tantalum
 0
 2
+2
+Capacitors
+C_Radial_D5.0mm_H11.0mm_P2.00mm_Lying
+C, Radial series, Radial, pin pitch=2.00mm, diameter=5mm, height=11mm, Non-Polar Electrolytic Capacitor
+C Radial series Radial pin pitch 2.00mm diameter 5mm height 11mm Non-Polar Electrolytic Capacitor
+0
+2
+2
+Capacitors
+C_Rect_L11.5mm_W4.5mm_P10.00mm_MKT_DoublePad
+C, Rect series, Radial, pin pitch=10.00mm, length*width=11.5*4.5mm^2, Capacitor, https://en.tdk.eu/inf/20/20/db/fc_2009/MKT_B32560_564.pdf
+C Rect series Radial pin pitch 10.00mm length 11.5mm width 4.5mm Capacitor
+0
+3
 2
 Connector
 Banana_Cliff_FCR7350B_S16N-PC_Horizontal
@@ -87885,7 +87899,7 @@ TO-264-5 Vertical RM 3.81mm
 5
 5
 Pads
-TestPoint_Top_Hole_D2.0mm
+TestPoint_Top_Hole_D1.8x1.1mm
 Plated Hole as test Point, diameter 2.0mm
 test point plated hole
 0
