@@ -228,5 +228,5 @@ Oбратна връзка:
 
 Изчислих цената на платка при прозизводство на 25 платки (сегашния прототип) и при 1000 платки (масово производство).
 
-https://docs.google.com/spreadsheets/d/1Jqyhl0rmlNVAXqkUv_VAvw58CTcEO6Sw8IRRW5vyJnQ/edit?gid=0#gid=0
+![BOM](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/BOM.png)
 
