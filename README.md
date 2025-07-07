@@ -216,3 +216,17 @@ Oбратна връзка:
 ![PCBFanV1.2](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBFanV1.2.png)
 ![3DFanV1.1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/3DFanV1.1.png)
 ![3DFanV1.2](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/3DFanV1.2.png)
+
+
+# Ден 5 - 07.07.2025
+
+Проверих pinout-а на симистора. Оказа се грешен. поправих го.
+Експортирах файлове за fabrication - `Gerbers.zip`
+Платката беше пусната за производство в hardtech.
+
+Също така оформих Bill of Materials, за да се поръчат компоненти. Пуснат е на екипа от ЗекЕнг.
+
+Изчислих цената на платка при прозизводство на 25 платки (сегашния прототип) и при 1000 платки (масово производство).
+
+https://docs.google.com/spreadsheets/d/1Jqyhl0rmlNVAXqkUv_VAvw58CTcEO6Sw8IRRW5vyJnQ/edit?gid=0#gid=0
+

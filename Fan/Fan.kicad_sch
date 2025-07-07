@@ -2022,7 +2022,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Triac_Thyristor:Generic_Triac_A1GA2"
+		(symbol "Triac_Thyristor:Generic_Triac_A2GA1"
 			(pin_names
 				(offset 0)
 			)
@@ -2038,7 +2038,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "Generic_Triac_A1GA2"
+			(property "Value" "Generic_Triac_A2GA1"
 				(at 3.175 -1.27 0)
 				(effects
 					(font
@@ -2065,7 +2065,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Triode for alternating current, anode1/gate/anode2"
+			(property "Description" "Triode for alternating current, anode2/gate/anode1"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2083,7 +2083,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Generic_Triac_A1GA2_0_1"
+			(symbol "Generic_Triac_A2GA1_0_1"
 				(polyline
 					(pts
 						(xy -2.54 1.27) (xy 2.54 1.27)
@@ -2145,7 +2145,7 @@
 					)
 				)
 			)
-			(symbol "Generic_Triac_A1GA2_1_1"
+			(symbol "Generic_Triac_A2GA1_1_1"
 				(pin input line
 					(at -3.81 -2.54 0)
 					(length 2.54)
@@ -2174,7 +2174,7 @@
 							)
 						)
 					)
-					(number "3"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2192,7 +2192,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3675,6 +3675,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Triac_Thyristor:Generic_Triac_A2GA1")
+		(at 165.1 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2d350f16-602a-4010-b942-d76b9298716c")
+		(property "Reference" "D6"
+			(at 168.91 58.9914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Generic_Triac_A2GA1"
+			(at 168.91 61.5314 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 167.005 59.055 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 59.69 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Triode for alternating current, anode2/gate/anode1"
+			(at 165.1 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "35aed2cd-2b7f-4b48-96d5-3e0a892414b9")
+		)
+		(pin "2"
+			(uuid "7b4fb7c8-e39b-4cf4-8e66-5c707bae1641")
+		)
+		(pin "1"
+			(uuid "425d334b-cb07-42f9-a8f7-e2a90604c940")
+		)
+		(instances
+			(project ""
+				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 62.23 59.69 270)
 		(unit 1)
@@ -4213,88 +4286,6 @@
 			(project "Fan"
 				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
 					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Triac_Thyristor:Generic_Triac_A1GA2")
-		(at 165.1 59.69 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5bca6a82-2886-4d42-a508-6d2ce67c1cbf")
-		(property "Reference" "D5"
-			(at 168.91 58.9914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MAC97A8"
-			(at 168.91 61.5314 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 167.005 59.055 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 59.69 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Triode for alternating current, anode1/gate/anode2"
-			(at 165.1 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "URL" "https://www.mouser.bg/ProductDetail/WeEn-Semiconductors/MAC97A8116?qs=LOCUfHb8d9vYlqZRcveX%2Fg%3D%3D&utm_id=6470817789&utm_source=google&utm_medium=cpc&utm_marketing_tactic=emeacorp&gad_source=1&gad_campaignid=6470817789&gbraid=0AAAAADn_wf3qxqVTpeV7RPIBizadnH-xD&gclid=CjwKCAjwsZPDBhBWEiwADuO6ywXSqR4zZgNDUBOA42-MS8Veb_WA5nAEEbFzTAgpBIW5iinEQRV4ehoCBWgQAvD_BwE"
-			(at 165.1 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2d8119a0-2d7b-4934-abce-1f12d6f969ce")
-		)
-		(pin "1"
-			(uuid "bdb11704-7a81-4746-8745-949d5817dffd")
-		)
-		(pin "3"
-			(uuid "42a1b416-6c5e-4d66-93bf-ba1427cff853")
-		)
-		(instances
-			(project ""
-				(path "/e7bc4821-edc0-4dba-87cc-5aec1e717ca9"
-					(reference "D5")
 					(unit 1)
 				)
 			)
