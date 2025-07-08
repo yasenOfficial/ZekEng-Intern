@@ -261,6 +261,4 @@ Blink:
 
 ![PassthroughReverb](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PassthroughReverb.mp4)
 
-Обаче Passthrough с Reverb има цифров шум и трябва да се изчисти.
-
-
+Обаче Passthrough с Reverb има цифров шум и трябва да се изчисти..
