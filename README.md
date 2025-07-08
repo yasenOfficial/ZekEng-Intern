@@ -262,5 +262,3 @@ https://github.com/user-attachments/assets/3d5a9c95-f11f-47a7-a7cd-25c1624e9f36
 Написах Passthrough Reverb (Минава сигнал от компютъра с reverb през платката и го изкарва на слушалките) - `DaisyExamples/pod/PassthroughReverb`
 
 https://github.com/user-attachments/assets/ea0f91bf-7a43-4274-871f-e3ecebe81c51
-
-Обаче Passthrough с Reverb има цифров шум и трябва да се изчисти..
