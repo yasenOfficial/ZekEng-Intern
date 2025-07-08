@@ -246,18 +246,21 @@ https://daisy.audio/tutorials/cpp-dev-env/#4a-flashing-daisy-via-usb
 
 Blink:
 
-![BlinkDSP](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/DSPBlink.mp4)
+https://github.com/user-attachments/assets/fd17b43d-5868-410e-99cb-3dca0cbfa887
+
 
 Написах output на прост сигнал с Reverb - `DaisyExamples/pod/Reverb`
 
-![Reverb](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Reverb.mp4)
+
+https://github.com/user-attachments/assets/809b711f-6c32-4bfa-b9f2-1e61ffa9d363
 
 Написах Passthrough (Минава сигнал от компютъра без processing през платката и го изкарва на слушалките) - `DaisyExamples/pod/Passthrough`
 
-![Passthrough](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Passthrough.mp4)
+
+https://github.com/user-attachments/assets/3d5a9c95-f11f-47a7-a7cd-25c1624e9f36
 
 Написах Passthrough Reverb (Минава сигнал от компютъра с reverb през платката и го изкарва на слушалките) - `DaisyExamples/pod/PassthroughReverb`
 
-![PassthroughReverb](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PassthroughReverb.mp4)
+https://github.com/user-attachments/assets/ea0f91bf-7a43-4274-871f-e3ecebe81c51
 
 Обаче Passthrough с Reverb има цифров шум и трябва да се изчисти..
