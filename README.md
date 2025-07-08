@@ -230,3 +230,37 @@ Oбратна връзка:
 
 ![BOM](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/BOM.png)
 
+Нужно е подобрение на сегашния сензор за влага. Той работи на принципна на мерене са съпротивление.
+В момента е покрит с латекс. Латекса се мие и не издържа на влага. Наложи се да направя research и според мен материала, с който трябва да се покрие сензора е полимид, защото е хидрофилен материал.
+Интересното е че flex-PCBs се правят от полимид, но тогава сензора би станал много скъп.
+
+# Ден 6 - 08.07.2025
+
+Докато чакаме платките да се произведат имам задачата да подкарам този dev board и да направя audio reverb effect.
+
+![DSPEvalBoard](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/DSPEvalBoard.jpg)
+
+Следвам setup guide-a:
+
+https://daisy.audio/tutorials/cpp-dev-env/#4a-flashing-daisy-via-usb
+
+Blink:
+
+![BlinkDSP](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/DSPBlink.mp4)
+
+
+Написах output на прост сигнал с Reverb - `DaisyExamples/pod/Reverb`
+
+![Reverb](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Reverb.mp4)
+
+Написах Passthrough (Минава сигнал от компютъра без processing през платката и го изкарва на слушалките) - `DaisyExamples/pod/Passthrough`
+
+![Passthrough](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Passthrough.mp4)
+
+Написах Passthrough Reverb (Минава сигнал от компютъра с reverb през платката и го изкарва на слушалките) - `DaisyExamples/pod/PassthroughReverb`
+
+![PassthroughReverb](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PassthroughReverb.mp4)
+
+Обаче Passthrough с Reverb има цифров шум и трябва да се изчисти.
+
+
