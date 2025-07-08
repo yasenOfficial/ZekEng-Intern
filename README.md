@@ -248,7 +248,6 @@ Blink:
 
 ![BlinkDSP](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/DSPBlink.mp4)
 
-
 Написах output на прост сигнал с Reverb - `DaisyExamples/pod/Reverb`
 
 ![Reverb](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/Reverb.mp4)
