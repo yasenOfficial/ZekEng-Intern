@@ -34,6 +34,12 @@ struct WavLoader
         f_lseek(&f, 24); uint32_t sr;   f_read(&f, &sr,   4, &br);
         f_lseek(&f, 34); uint16_t bits; f_read(&f, &bits, 2, &br);
 
+        hw.PrintLine("A");
+        hw.PrintLine("B");
+        hw.PrintLine("C");
+        hw.PrintLine("D");
+        hw.PrintLine("E");
+
         hw.PrintLine("WavLoader: bad fmt ch=%d \n", 2);
         hw.PrintLine("WavLoader: bad fmt sr=%d \n", 1);
 
