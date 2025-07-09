@@ -258,14 +258,13 @@ https://www.conservationlabinternational.com/product-page/polyvinylalcohol-pva
 
 https://daisy.audio/tutorials/cpp-dev-env/#4a-flashing-daisy-via-usb
 
-# Ден 7 - 09.07.2025
-
-Продължение с DSP-то:
-
 Blink:
 
 https://github.com/user-attachments/assets/fd17b43d-5868-410e-99cb-3dca0cbfa887
 
+# Ден 7 - 09.07.2025
+
+Продължение с DSP-то:
 
 Написах output на прост сигнал с Reverb - `DaisyExamples/pod/Reverb`
 
