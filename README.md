@@ -236,6 +236,20 @@ Oбратна връзка:
 
 # Ден 6 - 08.07.2025
 
+Още research за материала за сензора:
+
+`HumSensorResearch/Polyaniline_based_impedance_humidity_sen.pdf`
+
+PANI ^, материала е скъп и прави твърде голямо съпротивление, но иначе изглежда като нелошо решение.
+
+https://www.conservationlabinternational.com/product-page/polyvinylalcohol-pva
+
+Другия вариант е този тип алкохол.
+
+Оказва се, че платката би била най-издръжлива ако е направена от карбон
+
+Сензора трябва да е от е със номинално съпротивление 1.8Mohm и при 100% влажност трябва да падне на 1Mohm (Измервания от сегашния сензор)
+
 Докато чакаме платките да се произведат имам задачата да подкарам този dev board и да направя audio reverb effect.
 
 ![DSPEvalBoard](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/DSPEvalBoard.jpg)
@@ -243,6 +257,10 @@ Oбратна връзка:
 Следвам setup guide-a:
 
 https://daisy.audio/tutorials/cpp-dev-env/#4a-flashing-daisy-via-usb
+
+# Ден 7 - 09.07.2025
+
+Продължение с DSP-то:
 
 Blink:
 
@@ -262,3 +280,27 @@ https://github.com/user-attachments/assets/3d5a9c95-f11f-47a7-a7cd-25c1624e9f36
 Написах Passthrough Reverb (Минава сигнал от компютъра с reverb през платката и го изкарва на слушалките) - `DaisyExamples/pod/PassthroughReverb`
 
 https://github.com/user-attachments/assets/ea0f91bf-7a43-4274-871f-e3ecebe81c51
+
+
+Започвам research-a по конволуции. Това видео доста помогна: https://www.youtube.com/watch?v=KuXjwB4LzSA
+
+Каква е целта?
+
+Трябва да се вземе .wav от интеренет на Impulse Response и да се симулира чрез DSP-то същата конфигурация на входния сигнал.
+
+В `DaisyExamples\pod\Convolution\mono files` има качен `tunnel_entrance_f_1way_mono.wav` - това е Impulse Response-a
+
+Run-ваме тази команда:
+
+```sox tunnel_entrance_f_1way_mono.wav -r 48000 -b 24 -c 1  tunnel_entrance_48k.wav  gain -n -3  rate -v```
+
+- Прави output sample-rate-а на 48 000 Hz - (native rate-a на Daisy платката).
+- Пикова амплитуда –3 dBFS
+- Resample-ва с най-high-quality filter-a на SOX
+
+и получавам `out48.wav`
+
+Ще използвам този файл за конволуция на входа.
+
+
+
