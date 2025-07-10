@@ -12,163 +12,72 @@ constexpr size_t MAX_IR = 1024; // taps buffer size
 
 /* globals */
 static DaisySeed          hw;
-static SdmmcHandler       sd;
-static FatFSInterface     fsi;
 static FIR<MAX_IR, BLOCK> fir;
 static float              irBuf[MAX_IR];
+
+
+SdmmcHandler       sd;
+FatFSInterface     fsi;
+FIL     SDFile;
 
 struct WavLoader
 {
     static size_t Load(const char* path, float* dst, size_t max)
     {
-        FIL     f;
-        UINT    br;
-        DIR     dir;
-        FILINFO fno;
+        UINT    bytesread = 0;
+        char    buf[512];
 
-        if(f_opendir(&dir, "/IR") == FR_OK)
+        // 1. Print all root files for debug
+        DIR dir;
+        FILINFO fno;
+        if(f_opendir(&dir, "/") == FR_OK)
         {
             while(f_readdir(&dir, &fno) == FR_OK && fno.fname[0])
-            {
-                hw.PrintLine("File: %s", fno.fname);
-            }
+                hw.PrintLine("Found: %s", fno.fname);
             f_closedir(&dir);
+        }
+
+        // 2. Get file info
+        if(f_stat(path, &fno) == FR_OK)
+            hw.PrintLine("File size: %lu", (unsigned long)fno.fsize);
+        else
+            hw.PrintLine("f_stat failed for %s", path);
+
+        // 3. Open file
+        FRESULT fres = f_open(&SDFile, path, FA_READ);
+        if(fres != FR_OK)
+        {
+            hw.PrintLine("f_open failed: %d", fres);
+            return 0;
         }
         else
         {
-            hw.PrintLine("Failed to open /IR");
+            hw.PrintLine("f_open succeeded for %s", path);
         }
 
-        f_stat("/IR/out48.wav", &fno);
-        hw.PrintLine("File size: %lu bytes", (unsigned long)fno.fsize);
+        // 4. Read 512 bytes from the file
+        bytesread = 0;
+        FRESULT fr = f_read(&SDFile, buf, sizeof(buf), &bytesread);
+        f_close(&SDFile);
 
-
-
-        FRESULT fres = f_open(&f, "/IR/out48.wav", FA_READ);
-        hw.PrintLine("f_open returned %d", fres);
-        daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
-
-        
-        // Try to read some bytes
-        BYTE buf[16];
-        f_read(&f, buf, 16, &br);
-        hw.PrintLine("First 16 bytes, read %u bytes:", br);
-        for(int i = 0; i < br; ++i)
+        if(fr != FR_OK)
         {
-            hw.PrintLine("Byte %d: 0x%02X", i, buf[i]);
-            
-            hw.DelayMs(10);
-            daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
-
-        }
-
-
-
-        // if(riff != 0x46464952 || wave != 0x45564157) // "RIFF", "WAVE"
-        // {
-        //     hw.PrintLine("WavLoader: not a WAV");
-        //     hw.DelayMs(1);
-        //     f_close(&f);
-        //     return 0;
-        // }
-
-        // 3) Scan for fmt chunk
-        uint32_t chunkId, chunkSize;
-        uint16_t audioFmt = 0, numCh = 0, bitsPerSample = 0;
-        uint32_t sampleRate = 0;
-        while(true)
-        {
-            f_read(&f, &chunkId, 4, &br);
-            f_read(&f, &chunkSize, 4, &br);
-            if(chunkId == 0x20746D66) // "fmt "
-            {
-                // read fields
-                f_read(&f, &audioFmt, 2, &br);
-                f_read(&f, &numCh, 2, &br);
-                f_read(&f, &sampleRate, 4, &br);
-                // skip rest of fmt chunk
-                f_lseek(&f, f_tell(&f) + (chunkSize - 8));
-                hw.PrintLine("fmt chunk: fmt=%u ch=%u sr=%u\n",
-                             (unsigned)audioFmt,
-                             (unsigned)numCh,
-                             (unsigned)sampleRate);
-                break;
-            }
-            // skip unknown chunk
-            f_lseek(&f, f_tell(&f) + chunkSize);
-        }
-
-        // 4) Sanity check
-        if(audioFmt != 1 || numCh != 1 || sampleRate != 48000)
-        {
-            hw.PrintLine("WavLoader: bad fmt fmt=%u ch=%u sr=%u\n",
-                         (unsigned)audioFmt,
-                         (unsigned)numCh,
-                         (unsigned)sampleRate);
-            f_close(&f);
+            hw.PrintLine("f_read error: %d", fr);
             return 0;
         }
+        hw.PrintLine("Tried to read 256, got %u bytes", bytesread);
+        daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
 
-        // 5) Scan for data chunk
-        size_t samples = 0;
-        while(true)
-        {
-            f_read(&f, &chunkId, 4, &br);
-            f_read(&f, &chunkSize, 4, &br);
-            if(chunkId == 0x61746164) // "data"
-            {
-                samples = chunkSize / (bitsPerSample / 8);
-                if(samples > max)
-                    samples = max;
-                hw.PrintLine("data chunk: size=%u samples=%u bits=%u\n",
-                             (unsigned)chunkSize,
-                             (unsigned)samples,
-                             (unsigned)bitsPerSample);
-                break;
-            }
-            // skip other chunks
-            f_lseek(&f, f_tell(&f) + chunkSize);
-        }
+        for(UINT i = 0; i < bytesread; ++i)
+            hw.PrintLine("Byte %u: 0x%02X", i, buf[i]);
 
-        // 6) Read & convert sample data
-        if(bitsPerSample == 16)
-        {
-            for(size_t i = 0; i < samples; ++i)
-            {
-                int16_t v;
-                f_read(&f, &v, 2, &br);
-                dst[i] = s162f(v);
-            }
-        }
-        else if(bitsPerSample == 24)
-        {
-            uint8_t buf[3];
-            for(size_t i = 0; i < samples; ++i)
-            {
-                f_read(&f, buf, 3, &br);
-                int32_t v = (int32_t(buf[2]) << 16) | (buf[1] << 8) | buf[0];
-                if(v & 0x800000)
-                    v |= 0xFF000000;
-                dst[i] = v / 8388608.f;
-            }
-        }
-        else // 32-bit
-        {
-            for(size_t i = 0; i < samples; ++i)
-            {
-                int32_t v;
-                f_read(&f, &v, 4, &br);
-                dst[i] = v / 2147483648.f;
-            }
-        }
+        // 5. Close file
+        f_close(&SDFile);
 
-        f_close(&f);
-        hw.PrintLine("WavLoader: loaded %u taps\n", (unsigned)samples);
-        return samples;
+        // ✅ If we got bytes, return a “success” (simulate as 1 tap loaded, for now)
+        return 0; // (bytesread > 0) ? 1 : 0;
     }
 };
-
-
 /* Audio callback: left-in ► FIR ► stereo out */
 void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
                    AudioHandle::InterleavingOutputBuffer out,
@@ -199,11 +108,62 @@ int main()
         FRESULT res = f_mount(&fsi.GetSDFileSystem(), "/", 1);
         hw.PrintLine("f_mount returned %d\n", res);
         daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+         UINT    bytesread = 0;
+        char    buf[512];
 
+        // 1. Print all root files for debug
+        DIR dir;
+        FILINFO fno;
+        if(f_opendir(&dir, "/") == FR_OK)
+        {
+            while(f_readdir(&dir, &fno) == FR_OK && fno.fname[0])
+                hw.PrintLine("Found: %s", fno.fname);
+            f_closedir(&dir);
+        }
+
+        // 2. Get file info
+        if(f_stat("/out48.wav", &fno) == FR_OK)
+            hw.PrintLine("File size: %lu", (unsigned long)fno.fsize);
+        else
+            hw.PrintLine("f_stat failed for %s", "/out48.wav");
+
+        // 3. Open file
+        FRESULT fres = f_open(&SDFile, "/out48.wav", FA_READ);
+        if(fres != FR_OK)
+        {
+            hw.PrintLine("f_open failed: %d", fres);
+            return 0;
+        }
+        else
+        {
+            hw.PrintLine("f_open succeeded for %s", "/out48.wav");
+        }
+
+        // 4. Read 512 bytes from the file
+        bytesread = 0;
+        FRESULT fr = f_read(&SDFile, buf, sizeof(buf), &bytesread);
+        f_close(&SDFile);
+
+        if(fr != FR_OK)
+        {
+            hw.PrintLine("f_read error: %d", fr);
+            return 0;
+        }
+        hw.PrintLine("Tried to read 256, got %u bytes", bytesread);
+        daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+
+        for(UINT i = 0; i < bytesread; ++i)
+            hw.PrintLine("Byte %u: 0x%02X", i, buf[i]);
+
+        // 5. Close file
+        f_close(&SDFile);
+
+           hw.PrintLine("==============");
+        daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
     }
 
-    // 3) Load mono IR
-    size_t len = WavLoader::Load("/IR/out48.wav", irBuf, MAX_IR);
+    // 3) Load mono IR (from root, e.g., "/out48.wav")
+    size_t len = WavLoader::Load("/out48.wav", irBuf, MAX_IR);
     if(len == 0)
     {
         hw.PrintLine("Error: IR load failed, halting");
