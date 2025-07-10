@@ -353,3 +353,33 @@ https://lcsc.com/search?q=HR202&s_z=n_HR202
 
 
 
+# Ден 8 - 10.07.2025
+
+Наложи се да имплементирам собствена flush функция за буфера за принтиране и да прекомпилирам libDaisy съответно.
+
+```logger.h
+
+    static void Flush();
+```
+
+```logger.cpp
+
+template <LoggerDestination dest>
+void Logger<dest>::Flush()
+{
+    if(tx_ptr_ > 0)
+    {
+        TransmitBuf(); // will send and clear the buffer
+    }
+    // Ensure buffer is cleared, even if transmission failed.
+    tx_ptr_ = 0;
+}
+```
+
+Вече имам нормални принтове:
+
+```
+f_open succeeded!
+First 16 bytes, read 0 bytes:
+```
+

@@ -116,7 +116,18 @@ void Logger<dest>::AppendNewLine()
     }
 }
 
-/** explicit forward specializations */
+template <LoggerDestination dest>
+void Logger<dest>::Flush()
+{
+    if(tx_ptr_ > 0)
+    {
+        TransmitBuf(); // will send and clear the buffer
+    }
+    // Ensure buffer is cleared, even if transmission failed.
+    tx_ptr_ = 0;
+}
+
+// Other explicit instantiations:
 template class Logger<LOGGER_INTERNAL>;
 template class Logger<LOGGER_EXTERNAL>;
 template class Logger<LOGGER_SEMIHOST>;

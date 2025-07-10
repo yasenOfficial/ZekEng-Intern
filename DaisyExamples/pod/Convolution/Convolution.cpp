@@ -26,37 +26,50 @@ struct WavLoader
         uint8_t header[12] = {0};
         DIR     dir;
         FILINFO fno;
+
         if(f_opendir(&dir, "/IR") == FR_OK)
         {
             while(f_readdir(&dir, &fno) == FR_OK && fno.fname[0])
             {
                 hw.PrintLine("File: %s", fno.fname);
+                daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
             }
             f_closedir(&dir);
         }
         else
         {
             hw.PrintLine("Failed to open /IR");
+            daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
         }
 
 
-        if(f_open(&f, path, FA_READ) != FR_OK)
+        FRESULT fres = f_open(&f, "/IR/out48.wav", FA_READ);
+        hw.PrintLine("f_open returned %d", fres);
+        daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+        
+        // Add this check
+        if(fres != FR_OK)
         {
-            hw.PrintLine("Failed to open file!");
+            hw.PrintLine("f_open failed!");
+            hw.DelayMs(50);
             return 0;
         }
-
-        f_read(&f, header, 12, &br);
-        hw.PrintLine("Read %d bytes", br);
-        for(int i = 0; i < 12; i++)
+        else
         {
-            hw.PrintLine("header[%d] = 0x%02X (%c)",
-                         i,
-                         header[i],
-                         (header[i] >= 32 && header[i] < 127) ? header[i]
-                                                              : '.');
+            hw.PrintLine("f_open succeeded!"); // $$ FOR SOME REASON!
+            hw.DelayMs(50);
         }
-        f_close(&f);
+
+        // Try to read some bytes
+        BYTE buf[16];
+        f_read(&f, buf, 16, &br);
+        hw.PrintLine("First 16 bytes, read %u bytes:", br);
+        for(int i = 0; i < br; ++i)
+        {
+            hw.PrintLine("Byte %d: 0x%02X", i, buf[i]);
+            hw.DelayMs(50);
+
+        }
 
 
         // if(riff != 0x46464952 || wave != 0x45564157) // "RIFF", "WAVE"

@@ -96,6 +96,8 @@ class Logger
      */
     static void PrintLineV(const char* format, va_list va);
 
+    static void Flush();
+
   protected:
     /** Internal constants
      */
