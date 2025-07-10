@@ -383,3 +383,5 @@ f_open succeeded!
 First 16 bytes, read 0 bytes:
 ```
 
+Но не чете байтове от файла ми. Тествах `pod\WavPlayer\WavPlayer.cpp` и работеше. Ще се опитам да репликирам подобно в моя код.
+

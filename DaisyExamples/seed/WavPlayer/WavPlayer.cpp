@@ -71,7 +71,7 @@ void AudioCallback(AudioHandle::InterleavingInputBuffer  in,
 int main(void)
 {
     // Init hardware
-    size_t blocksize = 4;
+    size_t blocksize = 128;
     hw.Init();
     //    hw.ClearLeds();
     SdmmcHandler::Config sd_cfg;
@@ -89,6 +89,7 @@ int main(void)
     // Init Audio
     hw.SetAudioBlockSize(blocksize);
     hw.StartAudio(AudioCallback);
+
     // Loop forever...
     for(;;)
     {

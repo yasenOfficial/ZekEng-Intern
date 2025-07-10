@@ -23,7 +23,6 @@ struct WavLoader
     {
         FIL     f;
         UINT    br;
-        uint8_t header[12] = {0};
         DIR     dir;
         FILINFO fno;
 
@@ -32,34 +31,24 @@ struct WavLoader
             while(f_readdir(&dir, &fno) == FR_OK && fno.fname[0])
             {
                 hw.PrintLine("File: %s", fno.fname);
-                daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
             }
             f_closedir(&dir);
         }
         else
         {
             hw.PrintLine("Failed to open /IR");
-            daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
         }
+
+        f_stat("/IR/out48.wav", &fno);
+        hw.PrintLine("File size: %lu bytes", (unsigned long)fno.fsize);
+
 
 
         FRESULT fres = f_open(&f, "/IR/out48.wav", FA_READ);
         hw.PrintLine("f_open returned %d", fres);
         daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
-        
-        // Add this check
-        if(fres != FR_OK)
-        {
-            hw.PrintLine("f_open failed!");
-            hw.DelayMs(50);
-            return 0;
-        }
-        else
-        {
-            hw.PrintLine("f_open succeeded!"); // $$ FOR SOME REASON!
-            hw.DelayMs(50);
-        }
 
+        
         // Try to read some bytes
         BYTE buf[16];
         f_read(&f, buf, 16, &br);
@@ -67,9 +56,12 @@ struct WavLoader
         for(int i = 0; i < br; ++i)
         {
             hw.PrintLine("Byte %d: 0x%02X", i, buf[i]);
-            hw.DelayMs(50);
+            
+            hw.DelayMs(10);
+            daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
 
         }
+
 
 
         // if(riff != 0x46464952 || wave != 0x45564157) // "RIFF", "WAVE"
@@ -194,8 +186,9 @@ int main()
 {
     // 1) Init hardware + USB log
     hw.Init();
-    hw.StartLog();
+    hw.StartLog(true);
     hw.PrintLine("Daisy Seed initialized");
+    daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
 
     // 2) Mount SD + FATFS
     {
@@ -205,6 +198,8 @@ int main()
         fsi.Init(FatFSInterface::Config::MEDIA_SD);
         FRESULT res = f_mount(&fsi.GetSDFileSystem(), "/", 1);
         hw.PrintLine("f_mount returned %d\n", res);
+        daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+
     }
 
     // 3) Load mono IR
