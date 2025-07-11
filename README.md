@@ -386,3 +386,22 @@ First 16 bytes, read 0 bytes:
 Но не чете байтове от файла ми. Тествах `pod\WavPlayer\WavPlayer.cpp` и работеше. Ще се опитам да репликирам подобно в моя код.
 
 Написах `TestWav.cpp`, там работи не мога да разбера защо нe работи в `Covnolution.cpp`
+
+# Ден 8 - 11.07.2025
+
+ПРОЧЕТОХ .wav файл-а `f_read == FR_OK`!
+
+```
+---- Reopened serial port COM4 ----
+Found: 'System Volume Information'
+---
+Found: 'KriskoTest.wav'
+---
+Found: 'out48.wav'
+---
+Found: 'test.txt'
+---
+Impulse Response file size: 480080
+WOHOOO!
+```
+

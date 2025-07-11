@@ -3,7 +3,7 @@
 #include "daisy_seed.h"
 #include "fatfs.h"
 
-#define TEST_FILE_NAME "out48.wav" 
+#define IMPULSE_RESPONSE "out48.wav" 
 
 using namespace daisy;
 
@@ -35,7 +35,7 @@ int main(void)
     FRESULT mntres = f_mount(&fsi.GetSDFileSystem(), "/", 1);
 
     // Чети WAV файла
-    if(f_open(&SDFile, TEST_FILE_NAME, FA_READ) == FR_OK)
+    if(f_open(&SDFile, IMPULSE_RESPONSE, FA_READ) == FR_OK)
     {
         FRESULT fr = f_read(&SDFile, inbuff, sizeof(inbuff), &bytesread);
         f_close(&SDFile);
@@ -69,10 +69,9 @@ int main(void)
         for(int i = 0; i < fail + 1; i++)
         {
             hw.SetLed(true);
-            System::Delay(100);
+            System::Delay(1000);
             hw.SetLed(false);
-            System::Delay(100);
+            System::Delay(1000);
         }
-        System::Delay(1000);
     }
 }
