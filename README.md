@@ -405,7 +405,7 @@ Impulse Response file size: 480080
 WOHOOO!
 ```
 
-![HEXViewer](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/HEXViewer.png)
+![HEXViewer](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/HexViewer.png)
 
 
 ```
