@@ -29,6 +29,9 @@ class WavFile
     bool ParseHeader(const uint8_t* buf, size_t bufsize = 512);
     const Header& GetHeader() const;
     void PrintHeader();
+    
+    bool WriteAsNewFile(const char* filename, const uint8_t* originalFileBuffer) const;
+
 
   private:
     Header header;

@@ -9,15 +9,12 @@
 using namespace daisy;
 
 static DaisySeed hw;
-SdmmcHandler   sd;
-FatFSInterface fsi;
-FIL            SDFile;
+SdmmcHandler     sd;
+FatFSInterface   fsi;
+FIL              SDFile;
 
 int main(void)
 {
-    static char inbuff[512];
-    UINT        bytesread = 0;
-
     // Init hardware
     hw.Init();
     hw.StartLog(true);
@@ -49,21 +46,49 @@ int main(void)
 
     // Check impulse response file size
     FRESULT stat_res = f_stat(IMPULSE_RESPONSE, &fno);
-    if(stat_res == FR_OK)
-        hw.PrintLine("Impulse Response file size: %lu", (unsigned long)fno.fsize);
+    if(stat_res != FR_OK)
+    {
+        hw.PrintLine("File stat failed!");
+        return 1;
+    }
+    hw.PrintLine("Impulse Response file size: %lu", (unsigned long)fno.fsize);
+
+    UINT filesize = fno.fsize;
+    uint8_t* full_file = (uint8_t*)malloc(filesize);
+
+    if(full_file == NULL)
+    {
+        hw.PrintLine("Failed to allocate memory for full_file!");
+        return 1;
+    }
 
     if(f_open(&SDFile, IMPULSE_RESPONSE, FA_READ) == FR_OK)
     {
-        FRESULT fr = f_read(&SDFile, inbuff, sizeof(inbuff), &bytesread);
+        UINT    bytesread_total = 0;
+        FRESULT fr = f_read(&SDFile, full_file, filesize, &bytesread_total);
         f_close(&SDFile);
 
-        if(fr == FR_OK && bytesread > 0)
+        if(fr == FR_OK && bytesread_total == filesize)
         {
+            // Now parse header from full_file, not from inbuff!
             WavFile wav;
-            if(wav.ParseHeader((const uint8_t*)inbuff))
+            if(wav.ParseHeader(full_file, filesize))
             {
                 wav.PrintHeader();
-                // Here you would call your IR loading/convolution DSP setup, etc.
+
+                // Print data_offset and data_size from the header struct
+                const WavFile::Header& h = wav.GetHeader();
+
+                // Check for possible overflow!
+                if((unsigned long)h.data_offset + (unsigned long)h.data_size > (unsigned long)filesize)
+                {
+                    hw.PrintLine("ERROR: data_offset + data_size > filesize! WAV may be corrupt.");
+                    daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+                }
+                else
+                {
+                    wav.WriteAsNewFile("rebuilt.wav", full_file);
+                }
             }
             else
             {
@@ -73,15 +98,18 @@ int main(void)
         }
         else
         {
-            hw.PrintLine("Can't Read file, f_read returned: %d", fr);
+            hw.PrintLine(
+                "Can't Read full file, f_read returned: %d (read %lu/%lu bytes)",
+                fr,
+                (unsigned long)bytesread_total,
+                (unsigned long)filesize);
             daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
         }
+        free(full_file);
     }
     else
     {
         hw.PrintLine("Can't Open file");
         daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
     }
-
-    // You can add a main loop or audio callback here for DSP processing!
 }

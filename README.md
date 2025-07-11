@@ -472,3 +472,26 @@ chunk `data` (аудио данни)
 `Parse_Header`
 Разглежда header-a, търсейки chunks `fmt` и `data` навсякъде в първите N байта.
 Връща true при валиден WAV header (RIFF/WAVE, и двата chunka са намерени).
+
+
+Вече получаваме адекватна информация от header-a:
+```
+Impulse Response file size: 480080
+RIFF: RIFF
+File size: 480072
+WAVE: WAVE
+fmt : fmt 
+Audio Format: 1
+Channels: 1
+Sample Rate: 48000
+Byte Rate: 96000
+Block Align: 2
+Bits Per Sample: 16
+data: data
+Data Size: 480002
+Data Offset: 78
+``` 
+
+Следващата стъпка е да се пренашише същия файл и да се сравни с Audacity с оригиналния - `bool WavFile::WriteAsNewFile(const char* filename, const uint8_t* originalFileBuffer) const`
+
+За момента записвам header-a като хората, но не мога да копирам data-та.
