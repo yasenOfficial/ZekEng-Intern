@@ -69,7 +69,7 @@ int main(void)
         for(int i = 0; i < fail + 1; i++)
         {
             hw.SetLed(true);
-            System::Delay(1000);
+            System::Delay(100);
             hw.SetLed(false);
             System::Delay(1000);
         }

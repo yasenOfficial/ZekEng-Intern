@@ -1,12 +1,12 @@
 # Project Name
-TARGET = Convolution
+TARGET = main
 
 USE_DAISYSP_LGPL=1
 SD_CARD=1
 USE_FATFS=1
 
 # Sources
-CPP_SOURCES = Convolution.cpp
+CPP_SOURCES = main.cpp WavFile.cpp
 
 # Library Locations
 LIBDAISY_DIR = ../../libDaisy
