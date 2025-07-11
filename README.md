@@ -405,3 +405,44 @@ Impulse Response file size: 480080
 WOHOOO!
 ```
 
+![HEXViewer](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/HEXViewer.png)
+
+
+```
+Impulse Response file size: 480080
+f_read == FR_OK
+Byte[00]: 0x52 (82)
+Byte[01]: 0x49 (73)
+Byte[02]: 0x46 (70)
+Byte[03]: 0x46 (70)
+Byte[04]: 0x48 (72)
+Byte[05]: 0x53 (83)
+Byte[06]: 0x07 (7)
+Byte[07]: 0x00 (0)
+Byte[08]: 0x57 (87)
+Byte[09]: 0x41 (65)
+Byte[10]: 0x56 (86)
+Byte[11]: 0x45 (69)
+Byte[12]: 0x66 (102)
+Byte[13]: 0x6D (109)
+Byte[14]: 0x74 (116)
+Byte[15]: 0x20 (32)
+Byte[16]: 0x10 (16)
+Byte[17]: 0x00 (0)
+Byte[18]: 0x00 (0)
+Byte[19]: 0x00 (0)
+Byte[20]: 0x01 (1)
+Byte[21]: 0x00 (0)
+Byte[22]: 0x01 (1)
+Byte[23]: 0x00 (0)
+Byte[24]: 0x80 (-128)
+Byte[25]: 0xBB (-69)
+Byte[26]: 0x00 (0)
+Byte[27]: 0x00 (0)
+Byte[28]: 0x00 (0)
+Byte[29]: 0x77 (119)
+Byte[30]: 0x01 (1)
+Byte[31]: 0x00 (0)
+
+```
+

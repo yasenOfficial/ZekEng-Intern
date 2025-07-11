@@ -65,16 +65,27 @@ int main(void)
         // Проверка: bytesread > 0 и fr == FR_OK
         if(fr == FR_OK && bytesread > 0)
         {
-            for(;;)
-            {
-                hw.SetLed(true);
-                System::Delay(250);
-                hw.SetLed(false);
-                System::Delay(250);
-                    hw.PrintLine("WOHOOO!");
+                   
+            hw.PrintLine("f_read == FR_OK");
+            daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
 
-                    daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+            // for(;;)
+            // {
+            //     hw.SetLed(true);
+            //     System::Delay(250);
+            //     hw.SetLed(false);
+            //     System::Delay(250);
+            //         hw.PrintLine("WOHOOO!");
+
+            //         daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
+            // }
+
+            uint32_t to_print = bytesread < 32 ? bytesread : 32;
+            for (uint32_t i = 0; i < to_print; i++)
+            {
+                hw.PrintLine("Byte[%02lu]: 0x%02X (%d)", i, (uint8_t)inbuff[i], (int8_t)inbuff[i]);
             }
+            daisy::Logger<daisy::LOGGER_INTERNAL>::Flush();
         }
         else
         {
