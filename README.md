@@ -405,6 +405,8 @@ Impulse Response file size: 480080
 WOHOOO!
 ```
 
+Стойностите от Hex Viewer-a съответстват на изпринтените:
+
 ![HEXViewer](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/HexViewer.png)
 
 
@@ -446,3 +448,23 @@ Byte[31]: 0x00 (0)
 
 ```
 
+
+![WavHeader](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/WavHeader1.gif)
+![WavHeader](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/WavHeader2.png)
+
+Интересното е че `data` не винаги седи на 37-40 byte. 
+Output: `data_id: 'LIST' (expected: 'data')`
+
+WAV файловете са базирани на RIFF формат, който може да съдържа множество фрагменти.
+
+Минимумът е:
+
+Header "RIFF"
+
+chunk "fmt" (информация за формата)
+
+chunk "data" (аудио данни)
+
+Но: Много инструменти добавят допълнителни фрагменти като "LIST" (метаданни), "bext" (разширение за излъчване) и др.
+
+Трябва да се добави функция за динамично намиране на data-та
