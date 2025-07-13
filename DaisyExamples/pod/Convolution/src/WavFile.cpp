@@ -5,6 +5,7 @@
 
 // Externally defined in your main file
 extern daisy::DaisySeed hw;
+extern FIL ir_file;
 extern FIL in_file;
 extern FIL out_file;
 
@@ -215,3 +216,132 @@ bool CopyWavFileChunked(const char* infile_name,
         return false;
     }
 }
+
+
+size_t LoadImpulseResponse(const char* ir_filename, int16_t* buffer, size_t maxlen, size_t* ir_offset, size_t* ir_len)
+{
+    uint8_t header[256];
+    if(f_open(&ir_file, ir_filename, FA_READ) != FR_OK) return 0;
+
+    UINT bytesread = 0;
+    f_read(&ir_file, header, sizeof(header), &bytesread);
+
+    WavFile irwav;
+    if(!irwav.ParseHeader(header, bytesread)) { f_close(&ir_file); return 0; }
+    const WavFile::Header& h = irwav.GetHeader();
+
+    *ir_offset = h.data_offset;
+    *ir_len = h.data_size / 2; // 2 bytes per 16-bit sample
+
+    if(*ir_len > maxlen) *ir_len = maxlen;
+
+    // Seek to data
+    f_lseek(&ir_file, h.data_offset);
+    UINT read;
+    f_read(&ir_file, buffer, (*ir_len)*2, &read);
+    f_close(&ir_file);
+
+    return *ir_len;
+}
+
+bool ConvolveFiles(const char* in_filename, const char* ir_filename, const char* out_filename, size_t chunk_size)
+{
+    // 1. Load IR to RAM
+    const size_t MAX_IR = 16384; // 16k samples = 32kB
+    int16_t ir[MAX_IR];
+    size_t ir_offset = 0, ir_len = 0;
+
+    if(LoadImpulseResponse(ir_filename, ir, MAX_IR, &ir_offset, &ir_len) == 0)
+    {
+        hw.PrintLine("Failed to load IR");
+        return false;
+    }
+    hw.PrintLine("Loaded IR: %lu samples", (unsigned long)ir_len);
+   
+    if(f_open(&in_file, in_filename, FA_READ) != FR_OK)
+    {
+        hw.PrintLine("Can't open input file!");
+        return false;
+    }
+    if(f_open(&out_file, out_filename, FA_WRITE | FA_CREATE_ALWAYS) != FR_OK)
+    {
+        f_close(&in_file);
+        hw.PrintLine("Can't open output file!");
+        return false;
+    }
+
+    // 3. Parse input header
+    uint8_t header[256];
+    UINT bytesread = 0;
+    f_read(&in_file, header, sizeof(header), &bytesread);
+    WavFile inwav;
+    if(!inwav.ParseHeader(header, bytesread))
+    {
+        hw.PrintLine("Not a valid input WAV!");
+        f_close(&in_file); f_close(&out_file); return false;
+    }
+    const WavFile::Header& inh = inwav.GetHeader();
+
+    // Write output header (will patch sizes at the end)
+    f_write(&out_file, header, inh.data_offset, &bytesread);
+
+    // 4. Allocate buffers
+    int16_t* input_chunk = new int16_t[chunk_size + ir_len];
+    memset(input_chunk, 0, (chunk_size + ir_len)*2);
+    int16_t* out_chunk = new int16_t[chunk_size];
+
+    // Fill initial overlap with zeros for convolution
+    size_t n_read = 0, total_written = 0;
+    size_t chunk_samples = chunk_size;
+    size_t prev = 0;
+
+    // Seek to start of data
+    f_lseek(&in_file, inh.data_offset);
+
+    do {
+        // Shift overlap from previous chunk
+        memmove(input_chunk, input_chunk + chunk_samples, ir_len*2);
+        memset(input_chunk + ir_len, 0, chunk_samples*2); // Zero clear
+
+        UINT bytes;
+        f_read(&in_file, input_chunk + ir_len, chunk_samples*2, &bytes);
+        n_read = bytes / 2;
+
+        // For each output sample in chunk
+        for(size_t n = 0; n < n_read; ++n)
+        {
+            int32_t acc = 0;
+            for(size_t k = 0; k < ir_len; ++k)
+            {
+                if(n + ir_len >= k) // Always true for n >= 0, ir_len >= 0
+                    acc += input_chunk[n + ir_len - k] * ir[k];
+            }
+            // Clip to int16
+            if(acc > 32767) acc = 32767;
+            if(acc < -32768) acc = -32768;
+            out_chunk[n] = acc;
+        }
+
+        // Write output
+        f_write(&out_file, out_chunk, n_read*2, &bytes);
+        total_written += bytes;
+
+        // If less than a full chunk was read, we're done
+        if(n_read < chunk_samples)
+            break;
+
+    } while(1);
+
+    delete[] input_chunk;
+    delete[] out_chunk;
+
+    // Fix output header (write correct sizes)
+    // (seek to file size & data size locations in header and update them)
+
+    f_close(&in_file);
+    f_close(&out_file);
+
+    hw.PrintLine("Convolution done, wrote %lu bytes", (unsigned long)total_written);
+    return true;
+}
+

@@ -2,7 +2,6 @@
 #include <stdint.h>
 #include <stddef.h>
 #include "fatfs.h"
-#define IMPULSE_RESPONSE "out48.wav"
 
 class WavFile
 {
@@ -36,8 +35,9 @@ class WavFile
   private:
     Header header;
 };
-
 static FIL in_file;
+static FIL ir_file;
 static FIL out_file;
 
 bool CopyWavFileChunked(const char* infile, const char* outfile, size_t kChunkSize);
+bool ConvolveFiles(const char* infile, const char* irfile, const char* outfile, size_t chunk_size);

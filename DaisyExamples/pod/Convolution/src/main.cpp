@@ -28,7 +28,10 @@ int main(void)
     // Mount SD Card
     FRESULT mntres = f_mount(&fsi.GetSDFileSystem(), "/", 1);
 
-    CopyWavFileChunked(IMPULSE_RESPONSE, "out.wav", 4096);
+    // CopyWavFileChunked(IMPULSE_RESPONSE, "out.wav", 4096);
+
+    ConvolveFiles("KriskoTest.wav", "impulse.wav", "out.wav", 1024);
+
 
     return 0;
 }
