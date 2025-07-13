@@ -1,6 +1,8 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
+#include "fatfs.h"
+#define IMPULSE_RESPONSE "out48.wav"
 
 class WavFile
 {
@@ -29,10 +31,11 @@ class WavFile
     bool ParseHeader(const uint8_t* buf, size_t bufsize = 512);
     const Header& GetHeader() const;
     void PrintHeader();
-    
-    bool WriteAsNewFile(const char* filename, const uint8_t* originalFileBuffer) const;
 
 
   private:
     Header header;
 };
+
+bool CopyWavFileChunked(const char* infile_name, const char* outfilename, size_t kChunkSize);
+bool ReadAndPrintWavHeader(const char* filename);
