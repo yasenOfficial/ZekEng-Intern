@@ -37,5 +37,7 @@ class WavFile
     Header header;
 };
 
-bool CopyWavFileChunked(const char* infile_name, const char* outfilename, size_t kChunkSize);
-bool ReadAndPrintWavHeader(const char* filename);
+static FIL in_file;
+static FIL out_file;
+
+bool CopyWavFileChunked(const char* infile, const char* outfile, size_t kChunkSize);
