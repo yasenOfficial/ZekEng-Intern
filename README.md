@@ -505,3 +505,16 @@ Data Offset: 78
 Вече имам фунцкия, която копира от един файл в друг, като ръчно чета header-a и самите данни и ги пиша на ръка, за да верифицирам, че данните, които чета са легитимни.
 
 Опит да направя да конволюция.
+
+# Ден 10 - 15.07.2025
+
+Платките и компонентите пристигнаха днес.
+
+![PCBArrived1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBArrived1.jpg)
+![PCBArrived2](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBArrived2.jpg)
+
+Съответно успях да запоя 3 бройки точно преди оценяването днес.
+
+![PCBDone1](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBDone1.jpg)
+![PCBDone2](https://github.com/yasenOfficial/ZekEng-Intern/blob/main/Images/PCBDone2.jpg)
+
